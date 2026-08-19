@@ -2407,6 +2407,37 @@ congelación se realiza en la cocina tras la producción
   <li>Adquirir el producto refrigerado al final del recorrido
   de compra.</li>
 </ul>
+<p><strong>Producto cárnico en envase al vacío:</strong></p>
+<p>La carne se adquiere en envase al vacío. GN-16 §4.3.10
+establece que, una vez abierto, un envase al vacío debe
+utilizarse lo antes posible, ya que sus condiciones de
+conservación dejan de ser las del envase sellado.</p>
+<p><strong>Práctica de Órale:</strong> el envase al vacío se abre
+únicamente en el momento de iniciar la producción, y la
+cantidad prevista para la jornada se emplea íntegramente en esa
+misma jornada.</p>
+<p><strong>Salida del flujo del negocio:</strong> cualquier
+porción no destinada a la producción se retira de forma
+inmediata del flujo de alimento del negocio y pasa a consumo
+particular del equipo. Esta salida es definitiva: el producto
+retirado no se reincorpora en ningún caso a la producción de
+Órale, ni en la misma jornada ni en jornadas posteriores.</p>
+<p>La porción retirada se traslada de inmediato al nivel del
+refrigerador o al cajón del congelador etiquetados
+"PARTICULAR" (§10.3 y §10.3b), quedando físicamente separada
+del producto del negocio. No permanece en las zonas etiquetadas
+"ÓRALE".</p>
+<p>El envase se mantiene sellado y en refrigeración a ≤5°C
+desde la compra hasta el momento de la apertura.</p>
+<p><strong>Trazabilidad del producto de origen animal:</strong>
+la etiqueta del envase al vacío incluye el número de lote, la
+fecha de caducidad y la identificación del establecimiento de
+procedencia, datos exigidos por GN-16 §3.3.2. Órale conserva la
+etiqueta del envase junto al ticket de compra correspondiente,
+o registra el número de lote en HACCP-04. Esta evidencia
+permite trazar el producto un paso atrás hasta su
+establecimiento de origen, más allá del establecimiento
+minorista donde se adquirió.</p>
 <p class="nota"><em>Establecimientos habituales: Musgrave
 MarketPlace, Limerick Fruit Suppliers, mexicanthings, Dunnes,
 Tesco y Lidl. Trayecto típico a la cocina de producción: 15
@@ -2708,6 +2739,16 @@ County Council.</em></p>
           conservar el ticket o factura hasta que pueda asumirse
           razonablemente que el alimento ha sido consumido</li>
           <li>Registro en HACCP-04</li>
+          <li><strong>Trazabilidad del producto de origen animal:</strong>
+          la etiqueta del envase al vacío incluye el número de
+          lote, la fecha de caducidad y la identificación del
+          establecimiento de procedencia, datos exigidos por
+          GN-16 §3.3.2. Órale conserva la etiqueta del envase
+          junto al ticket de compra correspondiente, o registra
+          el número de lote en HACCP-04. Esta evidencia permite
+          trazar el producto un paso atrás hasta su
+          establecimiento de origen, más allá del establecimiento
+          minorista donde se adquirió.</li>
           <li><strong>Registro de compras:</strong> Órale mantiene
           una hoja de cálculo de compras que relaciona fecha,
           establecimiento e importe. Los tickets físicos se
@@ -2993,10 +3034,13 @@ ${filasVacias(20, 7)}  </tbody>
 de Proveedor</h3>
 <p class="nota"><em>Instrucción: Completar en cada compra.
 Conservar el ticket o factura adjunto: constituye el registro
-de trazabilidad conforme a GN-16 §3.3.4. Los registros se
-conservan al menos hasta que pueda asumirse razonablemente que
-el alimento ha sido consumido; como política interna, Órale los
-conserva un mínimo de 3 años.</em></p>
+de trazabilidad conforme a GN-16 §3.3.4. La columna "Lote
+(origen animal)" se completa cuando el producto es de origen
+animal y su envase declara número de lote — p. ej. envases al
+vacío de carne (§10.8). Los registros se conservan al menos
+hasta que pueda asumirse razonablemente que el alimento ha sido
+consumido; como política interna, Órale los conserva un mínimo
+de 3 años.</em></p>
 <div class="tabla-wrapper tabla-ancha">
 <table class="tabla-ancha">
   <thead>
@@ -3007,6 +3051,7 @@ conserva un mínimo de 3 años.</em></p>
       <th>Origen animal Sí/No</th>
       <th>Cantidad / Volumen</th>
       <th>Fecha de caducidad</th>
+      <th>Lote (origen animal)</th>
       <th>Envase OK Sí/No</th>
       <th>Aspecto OK Sí/No</th>
       <th>Temp. a la llegada (°C)</th>
@@ -3016,7 +3061,7 @@ conserva un mínimo de 3 años.</em></p>
     </tr>
   </thead>
   <tbody>
-${filasVacias(15, 12)}  </tbody>
+${filasVacias(15, 13)}  </tbody>
 </table>
 </div>
 
@@ -3275,6 +3320,11 @@ const ANEXO = `
   <li><label class="checklist-item">
     <input type="checkbox" class="checklist-check">
     <span>Formato HACCP-04 disponible para registrar la compra</span>
+  </label></li>
+  <li><label class="checklist-item">
+    <input type="checkbox" class="checklist-check">
+    <span>Conservar la etiqueta del envase al vacío junto al
+  ticket de compra</span>
   </label></li>
 </ul>
 

@@ -8,7 +8,7 @@ const path = require('path');
 const {
   Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell,
   WidthType, AlignmentType, BorderStyle, ShadingType, HeightRule,
-  VerticalAlign, PageOrientation, Footer
+  VerticalAlign, PageOrientation, Footer, LineRuleType
 } = require('docx');
 
 const config = require('../_private/config.js');
@@ -19,10 +19,16 @@ const COLOR_GRIS_TEXTO = '555555';
 const FILL_HEADER = '2E4053';
 const FILL_BLANCO = 'FFFFFF';
 const FILL_GRIS_CLARO = 'F5F5F5';
+const FONT = 'Arial';
+const SIZE = 20; // 10pt en todo el documento (half-points)
 
-// A4 en twips (1/20 pt) — el negocio opera en Irlanda/UE.
-const A4_WIDTH = 11906;
-const A4_HEIGHT = 16838;
+// Carta (Letter) en twips (1/20 pt) — 8.5 × 11 in.
+const LETTER_WIDTH = 12240;
+const LETTER_HEIGHT = 15840;
+
+// Empaquetado exacto de línea a 10pt para maximizar filas por hoja
+// sin reducir el tamaño de letra.
+const LINEA_AJUSTADA = { line: SIZE, lineRule: LineRuleType.EXACT };
 
 const BORDER = { style: BorderStyle.SINGLE, size: 4, color: 'CCCCCC' };
 const CELL_BORDERS = { top: BORDER, bottom: BORDER, left: BORDER, right: BORDER };
@@ -36,8 +42,8 @@ function headerParagraphs(formato, lang) {
           text: 'ÓRALE – AUTHENTIC MEXICAN FLAVOR',
           bold: true,
           color: COLOR_ROJO,
-          font: 'Arial',
-          size: 24
+          font: FONT,
+          size: SIZE
         })
       ]
     }),
@@ -45,10 +51,9 @@ function headerParagraphs(formato, lang) {
       children: [
         new TextRun({
           text: formato.nombre,
-          bold: true,
           color: COLOR_GRIS_OSCURO,
-          font: 'Arial',
-          size: 24
+          font: FONT,
+          size: SIZE
         })
       ]
     }),
@@ -56,12 +61,12 @@ function headerParagraphs(formato, lang) {
       children: [
         new TextRun({
           text: `${lang === 'es' ? 'Versión' : 'Version'} ${config.version} · ${fecha}`,
-          font: 'Arial',
-          size: 20,
+          font: FONT,
+          size: SIZE,
           color: COLOR_GRIS_TEXTO
         })
       ],
-      spacing: { after: 120 }
+      spacing: { after: 80 }
     })
   ];
 }
@@ -74,8 +79,8 @@ function footerParagraph(formato, lang) {
       new TextRun({
         text: `${config.empresa} · CRO ${config.cro} · ${etiqueta} ${formato.id} v${config.version}`,
         italics: true,
-        font: 'Arial',
-        size: 16,
+        font: FONT,
+        size: SIZE,
         color: COLOR_GRIS_TEXTO
       })
     ]
@@ -85,10 +90,10 @@ function footerParagraph(formato, lang) {
 function instruccionParagraph(formato, lang) {
   const etiqueta = lang === 'es' ? 'Instrucciones: ' : 'Instructions: ';
   return new Paragraph({
-    spacing: { after: 200 },
+    spacing: { after: 120 },
     children: [
-      new TextRun({ text: etiqueta, bold: true, italics: true, font: 'Arial', size: 20 }),
-      new TextRun({ text: formato.instruccion, italics: true, font: 'Arial', size: 20 })
+      new TextRun({ text: etiqueta, italics: true, font: FONT, size: SIZE }),
+      new TextRun({ text: formato.instruccion, italics: true, font: FONT, size: SIZE })
     ]
   });
 }
@@ -102,10 +107,11 @@ function headerRow(columnas) {
       shading: { fill: FILL_HEADER, type: ShadingType.CLEAR, color: 'auto' },
       verticalAlign: VerticalAlign.CENTER,
       borders: CELL_BORDERS,
-      margins: { top: 80, bottom: 80, left: 100, right: 100 },
+      margins: { top: 60, bottom: 60, left: 80, right: 80 },
       children: [new Paragraph({
         alignment: AlignmentType.CENTER,
-        children: [new TextRun({ text: titulo, bold: true, color: 'FFFFFF', font: 'Arial', size: 24 })]
+        spacing: LINEA_AJUSTADA,
+        children: [new TextRun({ text: titulo, bold: true, color: 'FFFFFF', font: FONT, size: SIZE })]
       })]
     }))
   });
@@ -120,12 +126,15 @@ function blankRow(numCols, alt) {
       width: { size: pct, type: WidthType.PERCENTAGE },
       shading: { fill, type: ShadingType.CLEAR, color: 'auto' },
       borders: CELL_BORDERS,
-      margins: { top: 80, bottom: 80, left: 100, right: 100 },
-      children: [new Paragraph({ children: [new TextRun({ text: '', font: 'Arial', size: 20 })] })]
+      margins: { top: 30, bottom: 30, left: 80, right: 80 },
+      children: [new Paragraph({
+        spacing: LINEA_AJUSTADA,
+        children: [new TextRun({ text: '', font: FONT, size: SIZE })]
+      })]
     }));
   }
   return new TableRow({
-    height: { value: 480, rule: HeightRule.ATLEAST },
+    height: { value: 260, rule: HeightRule.ATLEAST },
     children: cells
   });
 }
@@ -150,9 +159,10 @@ function fixedRow(zona, numCols, alt) {
     width: { size: pct, type: WidthType.PERCENTAGE },
     shading: { fill, type: ShadingType.CLEAR, color: 'auto' },
     borders: CELL_BORDERS,
-    margins: { top: 80, bottom: 80, left: 100, right: 100 },
+    margins: { top: 30, bottom: 30, left: 80, right: 80 },
     children: [new Paragraph({
-      children: [new TextRun({ text: zona, italics: true, color: COLOR_GRIS_TEXTO, font: 'Arial', size: 20 })]
+      spacing: LINEA_AJUSTADA,
+      children: [new TextRun({ text: zona, italics: true, color: COLOR_GRIS_TEXTO, font: FONT, size: SIZE })]
     })]
   })];
   for (let i = 1; i < numCols; i++) {
@@ -160,11 +170,14 @@ function fixedRow(zona, numCols, alt) {
       width: { size: pct, type: WidthType.PERCENTAGE },
       shading: { fill, type: ShadingType.CLEAR, color: 'auto' },
       borders: CELL_BORDERS,
-      margins: { top: 80, bottom: 80, left: 100, right: 100 },
-      children: [new Paragraph({ children: [new TextRun({ text: '', font: 'Arial', size: 20 })] })]
+      margins: { top: 30, bottom: 30, left: 80, right: 80 },
+      children: [new Paragraph({
+        spacing: LINEA_AJUSTADA,
+        children: [new TextRun({ text: '', font: FONT, size: SIZE })]
+      })]
     }));
   }
-  return new TableRow({ height: { value: 480, rule: HeightRule.ATLEAST }, children: cells });
+  return new TableRow({ height: { value: 260, rule: HeightRule.ATLEAST }, children: cells });
 }
 
 function buildFixedTable(formato) {
@@ -180,16 +193,16 @@ function buildFixedTable(formato) {
 function campoCabeceraParagraph(formato) {
   if (!formato.campoCabecera) return null;
   return new Paragraph({
-    spacing: { after: 160 },
-    children: [new TextRun({ text: formato.campoCabecera, font: 'Arial', size: 20 })]
+    spacing: { after: 120 },
+    children: [new TextRun({ text: formato.campoCabecera, font: FONT, size: SIZE })]
   });
 }
 
 function notaPieParagraph(formato) {
   if (!formato.notaPie) return null;
   return new Paragraph({
-    spacing: { before: 200 },
-    children: [new TextRun({ text: formato.notaPie, italics: true, font: 'Arial', size: 18, color: COLOR_GRIS_TEXTO })]
+    spacing: { before: 120 },
+    children: [new TextRun({ text: formato.notaPie, italics: true, font: FONT, size: SIZE, color: COLOR_GRIS_TEXTO })]
   });
 }
 
@@ -212,8 +225,8 @@ function buildDocument(formato, lang) {
     sections: [{
       properties: {
         page: {
-          size: { orientation, width: A4_WIDTH, height: A4_HEIGHT },
-          margin: { top: 567, bottom: 567, left: 567, right: 567 }
+          size: { orientation, width: LETTER_WIDTH, height: LETTER_HEIGHT },
+          margin: { top: 567, bottom: 567, left: 567, right: 567, footer: 284 }
         }
       },
       footers: { default: new Footer({ children: [footerParagraph(formato, lang)] }) },
@@ -249,11 +262,11 @@ const FORMATOS_ES = [
   },
   {
     id: 'HACCP-04',
-    nombre: 'HACCP-04 — Control de Recepción de Mercancía y Trazabilidad de Proveedor',
-    instruccion: 'Completar en cada entrega. GN-16 §3.3 exige conservar hasta que pueda asumirse razonablemente que el alimento ha sido consumido. Como política interna, Órale conserva los registros de alimentos de origen animal durante un mínimo de 3 años.',
+    nombre: 'HACCP-04 — Control de Compras y Trazabilidad de Proveedor',
+    instruccion: 'Completar en cada compra. Conservar el ticket o factura adjunto: constituye el registro de trazabilidad conforme a GN-16 §3.3.4. La columna "Lote (origen animal)" se completa cuando el producto es de origen animal y su envase declara número de lote — p. ej. envases al vacío de carne (§10.8). Los registros se conservan al menos hasta que pueda asumirse razonablemente que el alimento ha sido consumido; como política interna, Órale los conserva un mínimo de 3 años.',
     orientacion: 'landscape',
     filas: 15,
-    columnas: ['Fecha', 'Proveedor (nombre y dirección)', 'Producto', 'Cantidad / Volumen', 'Origen animal Sí/No', 'Temperatura recepción (°C)', 'Fecha caducidad', 'Envase OK Sí/No', 'Aspecto OK Sí/No', '¿Aceptado? Sí/No', 'Acción si rechazo', 'Responsable']
+    columnas: ['Fecha', 'Establecimiento', 'Producto', 'Origen animal Sí/No', 'Cantidad / Volumen', 'Fecha de caducidad', 'Lote (origen animal)', 'Envase OK Sí/No', 'Aspecto OK Sí/No', 'Temp. a la llegada (°C)', '¿Conforme? Sí/No', 'Referencia de ticket', 'Responsable']
   },
   {
     id: 'HACCP-05',
@@ -302,7 +315,7 @@ const FORMATOS_ES = [
     instruccion: 'Límite crítico: ≤-18°C en todo momento. Verificar dos veces al día. Una vez descongelado, no recongelar.',
     orientacion: 'landscape',
     filas: 31,
-    columnas: ['Fecha', 'Hora mañana', 'Temp. mañana (°C)', '¿≤-18°C? Sí/No', 'Hora noche', 'Temp. noche (°C)', '¿≤-18°C? Sí/No', 'Contenido (platillo/lote)', 'Acción correctiva', 'Responsable']
+    columnas: ['Fecha', 'Hora', 'Temp. (°C)', '¿≤-18°C? Sí/No', 'Contenido', 'Acción correctiva', 'Responsable']
   },
   {
     id: 'HACCP-11',
@@ -349,11 +362,11 @@ const FORMATOS_EN = [
   },
   {
     id: 'HACCP-04',
-    nombre: 'HACCP-04 — Goods Receipt & Supplier Traceability Control',
-    instruccion: 'Complete for every delivery. GN-16 §3.3 requires retaining records until food can reasonably be assumed to have been consumed. As internal policy, Órale retains records for food of animal origin for a minimum of 3 years.',
+    nombre: 'HACCP-04 — Purchase Control and Supplier Traceability',
+    instruccion: 'Complete for every purchase. Keep the attached receipt or invoice: it constitutes the traceability record under GN-16 §3.3.4. The "Batch (animal origin)" column is completed when the product is of animal origin and its pack declares a batch number — e.g. vacuum-packed meat (§10.8). Records are retained at least until the food can reasonably be assumed to have been consumed; as internal policy, Órale retains them for a minimum of 3 years.',
     orientacion: 'landscape',
     filas: 15,
-    columnas: ['Date', 'Supplier (name & address)', 'Product', 'Quantity / Volume', 'Animal origin Y/N', 'Reception temperature (°C)', 'Best before / Use by', 'Packaging OK Y/N', 'Appearance OK Y/N', 'Accepted? Y/N', 'Action if rejected', 'Responsible']
+    columnas: ['Date', 'Store', 'Product', 'Animal origin Y/N', 'Quantity / Volume', 'Use by / Best before', 'Batch (animal origin)', 'Packaging OK Y/N', 'Appearance OK Y/N', 'Temp. on arrival (°C)', 'Compliant? Y/N', 'Receipt reference', 'Responsible']
   },
   {
     id: 'HACCP-05',
@@ -402,7 +415,7 @@ const FORMATOS_EN = [
     instruccion: 'Critical limit: ≤-18°C at all times. Check twice a day. Once defrosted, do not refreeze.',
     orientacion: 'landscape',
     filas: 31,
-    columnas: ['Date', 'Morning time', 'Morning temp. (°C)', '≤-18°C? Yes/No', 'Evening time', 'Evening temp. (°C)', '≤-18°C? Yes/No', 'Contents (dish/batch)', 'Corrective action', 'Responsible']
+    columnas: ['Date', 'Time', 'Temp. (°C)', '≤-18°C? Y/N', 'Contents', 'Corrective action', 'Responsible']
   },
   {
     id: 'HACCP-11',
