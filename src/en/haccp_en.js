@@ -2356,6 +2356,34 @@ the kitchen after production (CCP4).</p>
   <li>Purchase chilled product at the end of the shopping
   route.</li>
 </ul>
+<p><strong>Vacuum-packed meat:</strong></p>
+<p>Meat is purchased vacuum-packed. GN-16 §4.3.10 states that,
+once opened, a vacuum pack must be used as soon as possible,
+since its storage conditions are no longer those of the sealed
+pack.</p>
+<p><strong>Órale's practice:</strong> the vacuum pack is opened
+only at the start of production, and the quantity planned for
+the session is used in full during that same session.</p>
+<p><strong>Exit from the business flow:</strong> any portion not
+intended for production is removed immediately from the
+business's food flow and passes to the team's personal
+consumption. This exit is final: the removed product is never
+reincorporated into Órale's production, either on the same day
+or on a later day.</p>
+<p>The removed portion is moved immediately to the refrigerator
+shelf or freezer drawer labelled "PARTICULAR" (§10.3 and
+§10.3b), remaining physically separate from the business's
+product. It does not remain in the areas labelled "ÓRALE".</p>
+<p>The pack is kept sealed and refrigerated at ≤5°C from
+purchase until the moment it is opened.</p>
+<p><strong>Traceability of animal-origin product:</strong> the
+vacuum pack's label includes the batch number, the use-by date
+and the identification of the establishment of origin, data
+required by GN-16 §3.3.2. Órale keeps the pack label together
+with the corresponding purchase receipt, or records the batch
+number in HACCP-04. This evidence allows the product to be
+traced one step back to its establishment of origin, beyond the
+retail store where it was purchased.</p>
 <p class="nota"><em>Regular stores: Musgrave MarketPlace,
 Limerick Fruit Suppliers, mexicanthings, Dunnes, Tesco and
 Lidl. Typical journey to the production kitchen: 15
@@ -2651,6 +2679,15 @@ authorised by Limerick City &amp; County Council.</em></p>
           the receipt or invoice until the food can reasonably be
           assumed to have been consumed</li>
           <li>Recorded in HACCP-04</li>
+          <li><strong>Traceability of animal-origin product:</strong>
+          the vacuum pack's label includes the batch number, the
+          use-by date and the identification of the establishment
+          of origin, data required by GN-16 §3.3.2. Órale keeps
+          the pack label together with the corresponding purchase
+          receipt, or records the batch number in HACCP-04. This
+          evidence allows the product to be traced one step back
+          to its establishment of origin, beyond the retail store
+          where it was purchased.</li>
           <li><strong>Purchase record:</strong> Órale keeps a
           purchasing spreadsheet listing date, store and amount.
           Physical receipts are filed and constitute the
@@ -2926,10 +2963,12 @@ ${blankRows(20, 7)}  </tbody>
 Traceability</h3>
 <p class="nota"><em>Instructions: Complete for every purchase.
 Keep the attached receipt or invoice: it constitutes the
-traceability record under GN-16 §3.3.4. Records are retained at
-least until the food can reasonably be assumed to have been
-consumed; as internal policy, Órale retains them for a minimum
-of 3 years.</em></p>
+traceability record under GN-16 §3.3.4. The "Batch (animal
+origin)" column is completed when the product is of animal
+origin and its pack declares a batch number — e.g. vacuum-packed
+meat (§10.8). Records are retained at least until the food can
+reasonably be assumed to have been consumed; as internal policy,
+Órale retains them for a minimum of 3 years.</em></p>
 <div class="tabla-wrapper tabla-ancha">
 <table class="tabla-ancha">
   <thead>
@@ -2940,6 +2979,7 @@ of 3 years.</em></p>
       <th>Animal origin Y/N</th>
       <th>Quantity / Volume</th>
       <th>Use by / Best before</th>
+      <th>Batch (animal origin)</th>
       <th>Packaging OK Y/N</th>
       <th>Appearance OK Y/N</th>
       <th>Temp. on arrival (°C)</th>
@@ -2949,7 +2989,7 @@ of 3 years.</em></p>
     </tr>
   </thead>
   <tbody>
-${blankRows(15, 12)}  </tbody>
+${blankRows(15, 13)}  </tbody>
 </table>
 </div>
 
@@ -3205,6 +3245,11 @@ const ANEXO = `
   <li><label class="checklist-item">
     <input type="checkbox" class="checklist-check">
     <span>HACCP-04 format available to record the purchase</span>
+  </label></li>
+  <li><label class="checklist-item">
+    <input type="checkbox" class="checklist-check">
+    <span>Keep the vacuum pack label together with the
+  purchase receipt</span>
   </label></li>
 </ul>
 
