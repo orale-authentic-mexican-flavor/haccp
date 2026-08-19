@@ -66,6 +66,7 @@ module.exports = {
       s10_5: "10.5 Manejo de Residuos",
       s10_6: "10.6 Mantenimiento de Utensilios",
       s10_7: "10.7 Control de Plagas",
+      s10_8: "10.8 Compras y Transporte desde el Proveedor",
 
       s11: "11. Gestión de Alérgenos",
       s11_1: "11.1 Tabla de Alérgenos",
@@ -150,6 +151,7 @@ module.exports = {
       s10_5: "10.5 Waste Management",
       s10_6: "10.6 Utensil Maintenance",
       s10_7: "10.7 Pest Control",
+      s10_8: "10.8 Purchasing and Transport from the Supplier",
 
       s11: "11. Allergen Management",
       s11_1: "11.1 Allergen Table",

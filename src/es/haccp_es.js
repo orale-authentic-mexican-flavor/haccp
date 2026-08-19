@@ -193,7 +193,7 @@ const SECCION_2 = `
         <ul>
           <li>Supervisión diaria del punto de venta</li>
           <li>Implementación y mantenimiento del plan HACCP</li>
-          <li>Registros de temperatura y control de recepción</li>
+          <li>Registros de temperatura y control de compras</li>
           <li>Control de alérgenos y limpieza</li>
           <li>Gestión de rutas, licencias y cumplimiento HSE/FSAI</li>
           <li>Primer respondedor ante incidencias de seguridad alimentaria</li>
@@ -453,25 +453,33 @@ Council.</strong></p>
   <tbody>
     <tr>
       <td>1</td>
-      <td>Compra de materias primas</td>
+      <td>Compra presencial de materias primas</td>
       <td>
         <ul>
-          <li>Proveedores aprobados (Musgrave MarketPlace y otros)</li>
-          <li>Verificación de calidad y fecha de caducidad</li>
-          <li>Control de temperatura en punto de compra</li>
+          <li>Compra presencial en establecimientos habituales
+          (Musgrave MarketPlace, Limerick Fruit Suppliers,
+          mexicanthings, Dunnes, Tesco, Lidl). No se reciben
+          entregas de proveedores</li>
+          <li>Criterios de selección en el establecimiento: ver §10.8</li>
+          <li>Producto refrigerado adquirido al final del
+          recorrido de compra; transporte en bolsa isotérmica
+          con acumuladores de frío (§10.8, GN-16 §4.3.11)</li>
+          <li>Registro de la compra en HACCP-04</li>
         </ul>
       </td>
     </tr>
     <tr class="alt">
       <td>2</td>
-      <td>Recepción y almacenamiento en cocina doméstica</td>
+      <td>Transporte y almacenamiento en cocina doméstica</td>
       <td>
         <ul>
+          <li>Verificación de temperatura a la llegada con
+          termómetro de sonda (§10.8); desechar si el producto
+          refrigerado supera 5°C</li>
           <li>Carnes crudas en balda inferior del refrigerador</li>
           <li>Alimentos cocinados/listos en balda superior</li>
           <li>Productos secos en armario cerrado</li>
           <li>Sistema FIFO</li>
-          <li>Registro de lotes en HACCP-04</li>
         </ul>
       </td>
     </tr>
@@ -870,18 +878,18 @@ const SECCION_5 = `
   </thead>
   <tbody>
     <tr class="celda-riesgo-alto">
-      <td>Recepción MP</td>
+      <td>Compra y transporte de MP</td>
       <td>Salmonella, E. coli, Listeria en carnes crudas</td>
       <td>Residuos de pesticidas</td>
       <td>Cuerpos extraños</td>
       <td>3</td><td>3</td><td>9</td>
       <td>
         <ul>
-          <li>Verificar temperatura ≤5°C</li>
-          <li>Proveedor aprobado</li>
+          <li>Verificar temperatura ≤5°C a la llegada</li>
+          <li>Selección en el establecimiento (§10.8)</li>
           <li>Inspección visual</li>
-          <li>Prerrequisito: control de proveedores y
-          trazabilidad en recepción (§4.1, HACCP-04)</li>
+          <li>Prerrequisito: compra presencial, transporte en
+          bolsa isotérmica y trazabilidad (§4.1, §10.8, HACCP-04)</li>
         </ul>
       </td>
       <td>NO</td>
@@ -1151,7 +1159,7 @@ coincide con la columna "¿Es PCC?" de §5.2.</p>
   </thead>
   <tbody>
     <tr>
-      <td>Recepción MP</td>
+      <td>Compra y transporte de MP</td>
       <td>Sí</td>
       <td>No</td>
       <td>Sí</td>
@@ -2081,8 +2089,8 @@ momento.</p>
     </tr>
     <tr class="alt">
       <td>HACCP-04</td>
-      <td>Control de recepción de mercancía</td>
-      <td>Cada entrega de proveedor</td>
+      <td>Control de compras y trazabilidad de proveedor</td>
+      <td>Cada compra</td>
       <td>Cocina doméstica</td>
     </tr>
     <tr>
@@ -2360,6 +2368,49 @@ alimentaria.</p>
   </li>
   <li>Registro de inspecciones e incidencias en HACCP-07</li>
 </ul>
+
+<h2 id="sec-10-8">10.8 Compras y Transporte desde el Proveedor</h2>
+<p>Órale adquiere todos sus insumos de forma presencial: el
+equipo acude al establecimiento, selecciona el producto y lo
+transporta a la cocina de producción. No se reciben entregas
+de proveedores. Tampoco se adquiere producto congelado: la
+congelación se realiza en la cocina tras la producción
+(PCC4).</p>
+<p><strong>Requisitos de transporte (GN-16 §4.3.11):</strong></p>
+<ul>
+  <li>El producto refrigerado se transporta en bolsa isotérmica
+  con acumuladores de frío, manteniendo ≤5°C durante todo el
+  trayecto.</li>
+  <li>Los acumuladores de frío se conservan en el congelador y
+  se incorporan a la bolsa antes de salir de compras.</li>
+  <li>El producto refrigerado se adquiere al final del recorrido
+  de compra, para minimizar el tiempo fuera de refrigeración.</li>
+  <li>El alimento crudo de origen animal se transporta separado
+  del producto listo para consumo y de los vegetales.</li>
+  <li>A la llegada a la cocina, el producto se almacena de
+  inmediato en refrigeración y se verifica su temperatura
+  con termómetro de sonda desinfectado.</li>
+  <li>Si el producto refrigerado supera 5°C a la llegada, se
+  desecha. Registrar en HACCP-07.</li>
+</ul>
+<p><strong>Criterios de selección en el establecimiento:</strong></p>
+<ul>
+  <li>Verificar fecha de caducidad o consumo preferente; no
+  adquirir producto próximo a vencer si no se va a usar en
+  la jornada siguiente.</li>
+  <li>Verificar integridad del envase: sin roturas, sin
+  abolladuras en latas, sin envases hinchados.</li>
+  <li>Verificar aspecto, color y olor del producto fresco.</li>
+  <li>Verificar que el producto refrigerado se exhibe en
+  mostrador frío; no adquirir producto expuesto fuera de su
+  equipo de frío.</li>
+  <li>Adquirir el producto refrigerado al final del recorrido
+  de compra.</li>
+</ul>
+<p class="nota"><em>Establecimientos habituales: Musgrave
+MarketPlace, Limerick Fruit Suppliers, mexicanthings, Dunnes,
+Tesco y Lidl. Trayecto típico a la cocina de producción: 15
+minutos.</em></p>
 `;
 
 const SECCION_11 = `
@@ -2650,12 +2701,23 @@ County Council.</em></p>
       <td>Trazabilidad de proveedores (GN16 §3.3)</td>
       <td>
         <ul>
-          <li>Mantener registro de: nombre y dirección del
-          proveedor, tipo de producto, fecha de entrega</li>
+          <li>Órale compra de forma presencial, sin entregas de
+          proveedor (§10.8). Mantener registro de: establecimiento,
+          tipo de producto, fecha de compra</li>
           <li>Para alimentos de origen animal (cerdo, pollo):
-          guardar albaranes hasta que pueda asumirse razonablemente
-          que el alimento ha sido consumido</li>
+          conservar el ticket o factura hasta que pueda asumirse
+          razonablemente que el alimento ha sido consumido</li>
           <li>Registro en HACCP-04</li>
+          <li><strong>Registro de compras:</strong> Órale mantiene
+          una hoja de cálculo de compras que relaciona fecha,
+          establecimiento e importe. Los tickets físicos se
+          archivan y constituyen el registro de trazabilidad
+          conforme a GN-16 §3.3.4. La hoja de cálculo registra el
+          importe por establecimiento; el detalle de productos
+          adquiridos se recoge en HACCP-04 y en el ticket
+          conservado. HACCP-04 vincula cada producto con su
+          referencia de ticket, de modo que ante una incidencia
+          pueda identificarse el origen del insumo afectado.</li>
           <li><strong>Envases y empaques (GN-16 §3.3.4):</strong>
           se mantiene registro del proveedor de contenedores,
           tapas, cubiertos, bolsas y demás materiales en contacto
@@ -2927,28 +2989,29 @@ ${filasVacias(20, 7)}  </tbody>
 </table>
 </div>
 
-<h3 id="haccp-04">HACCP-04 — Control de Recepción de Mercancía
-y Trazabilidad de Proveedor</h3>
-<p class="nota"><em>GN16 §3.3: Instrucción: Completar en cada
-entrega. GN-16 §3.3 exige conservar hasta que pueda asumirse
-razonablemente que el alimento ha sido consumido. Como política
-interna, Órale conserva los registros de alimentos de origen
-animal durante un mínimo de 3 años.</em></p>
+<h3 id="haccp-04">HACCP-04 — Control de Compras y Trazabilidad
+de Proveedor</h3>
+<p class="nota"><em>Instrucción: Completar en cada compra.
+Conservar el ticket o factura adjunto: constituye el registro
+de trazabilidad conforme a GN-16 §3.3.4. Los registros se
+conservan al menos hasta que pueda asumirse razonablemente que
+el alimento ha sido consumido; como política interna, Órale los
+conserva un mínimo de 3 años.</em></p>
 <div class="tabla-wrapper tabla-ancha">
 <table class="tabla-ancha">
   <thead>
     <tr>
       <th>Fecha</th>
-      <th>Proveedor (nombre y dirección)</th>
+      <th>Establecimiento</th>
       <th>Producto</th>
-      <th>Cantidad / Volumen</th>
       <th>Origen animal Sí/No</th>
-      <th>Temperatura recepción (°C)</th>
-      <th>Fecha caducidad</th>
+      <th>Cantidad / Volumen</th>
+      <th>Fecha de caducidad</th>
       <th>Envase OK Sí/No</th>
       <th>Aspecto OK Sí/No</th>
-      <th>¿Aceptado? Sí/No</th>
-      <th>Acción si rechazo</th>
+      <th>Temp. a la llegada (°C)</th>
+      <th>¿Conforme? Sí/No</th>
+      <th>Referencia de ticket</th>
       <th>Responsable</th>
     </tr>
   </thead>
@@ -3195,6 +3258,26 @@ ${filasVacias(20, 13)}  </tbody>
 })();
 
 const ANEXO = `
+<h2>Compras — verificar antes de salir a comprar</h2>
+<ul class="checklist">
+  <li><label class="checklist-item">
+    <input type="checkbox" class="checklist-check">
+    <span>Bolsa isotérmica para transporte de compras</span>
+  </label></li>
+  <li><label class="checklist-item">
+    <input type="checkbox" class="checklist-check">
+    <span>Acumuladores de frío congelados, listos antes de salir</span>
+  </label></li>
+  <li><label class="checklist-item">
+    <input type="checkbox" class="checklist-check">
+    <span>Termómetro de sonda para verificar a la llegada</span>
+  </label></li>
+  <li><label class="checklist-item">
+    <input type="checkbox" class="checklist-check">
+    <span>Formato HACCP-04 disponible para registrar la compra</span>
+  </label></li>
+</ul>
+
 <h2>Cocina Doméstica — verificar antes de cada sesión de preparación</h2>
 <ul class="checklist">
   <li><label class="checklist-item">
@@ -3517,9 +3600,9 @@ durante la operación diaria.</p>
     </tr>
     <tr class="alt">
       <td>HACCP-04</td>
-      <td>Control de recepción y trazabilidad</td>
+      <td>Control de compras y trazabilidad</td>
       <td>—</td>
-      <td>Cada entrega de proveedor</td>
+      <td>Cada compra</td>
       <td>Cocina doméstica</td>
       <td><a href="{{formatosUrl.es}}/HACCP-04_ES.docx">Descargar DOCX</a></td>
     </tr>
