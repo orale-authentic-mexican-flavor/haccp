@@ -19,6 +19,138 @@ const OUTPUT_PATH = path.join(__dirname, '..', '..', 'HACCP_Orale_v1.4_ES.html')
 // Contenido de las Secciones 1–6 (HTML inyectado en cada div.seccion-contenido)
 // ---------------------------------------------------------------------------
 
+const SECCION_0 = `
+<h2 id="sec-0-1">0.1 Qué significa HACCP</h2>
+<p><strong>HACCP</strong> son las siglas en inglés de
+<em>Hazard Analysis and Critical Control Point</em> — Análisis
+de Peligros y Puntos Críticos de Control. Es un sistema que
+identifica, evalúa y controla los peligros que pueden hacer que
+un alimento no sea seguro para comer.</p>
+<p>Un <strong>peligro</strong> es cualquier agente biológico
+(bacterias, virus, parásitos), químico (residuos de limpieza,
+alérgenos mal declarados) o físico (vidrio, metal, hueso) capaz
+de causar daño a quien consume el alimento.</p>
+<p>HACCP es un sistema <strong>preventivo</strong>: en lugar de
+esperar a tener el producto terminado y revisar si salió bien,
+controla el proceso en cada etapa para que el peligro no llegue
+a materializarse. Se actúa antes de que el problema ocurra, no
+después.</p>
+
+<h2 id="sec-0-2">0.2 Prerrequisitos y HACCP</h2>
+<p>Los <strong>prerrequisitos</strong> son las condiciones e
+higiene básicas que deben existir antes y durante el sistema:
+instalaciones adecuadas, equipo en buen estado, limpieza y
+desinfección, control de plagas, higiene personal, formación del
+equipo, control de proveedores y gestión de residuos.</p>
+<p>HACCP se construye sobre los prerrequisitos, no los sustituye.
+Sin prerrequisitos sólidos, el sistema HACCP no se sostiene: de
+poco sirve vigilar un punto crítico de control si la cocina no
+está limpia o el personal no se lava las manos.</p>
+<p>En este plan, los prerrequisitos se desarrollan en la
+<strong>Sección 10 (Programas Prerrequisito)</strong> y los puntos
+críticos de control en la <strong>Sección 6 (Puntos Críticos de
+Control)</strong>.</p>
+
+<h2 id="sec-0-3">0.3 Los siete principios del Codex Alimentarius</h2>
+<p>HACCP se organiza en siete principios establecidos por el
+Codex Alimentarius. Este plan aplica los siete; cada uno tiene su
+desarrollo en una sección específica de este documento:</p>
+<ol>
+  <li><strong>Realizar un análisis de peligros.</strong>
+  Identificar qué puede salir mal en cada etapa del proceso.
+  Desarrollado en la <strong>Sección 5 (Análisis de
+  Peligros)</strong>.</li>
+  <li><strong>Determinar los puntos críticos de control
+  (PCC).</strong> Identificar en qué etapas es esencial controlar
+  un peligro. Desarrollado en la <strong>Sección 6.1 (Árbol de
+  Decisiones)</strong>.</li>
+  <li><strong>Establecer límites críticos.</strong> Fijar el valor
+  medible (por ejemplo, una temperatura) que separa lo seguro de
+  lo inseguro en cada PCC. Desarrollado en la <strong>Sección
+  6</strong>, dentro de la ficha de cada PCC.</li>
+  <li><strong>Establecer un sistema de monitoreo.</strong> Definir
+  qué se mide, cómo, cuándo y quién lo hace. Desarrollado en la
+  <strong>Sección 7.1 (Resumen de Monitoreo)</strong>.</li>
+  <li><strong>Establecer acciones correctivas.</strong> Definir
+  qué hacer cuando se detecta una desviación de un límite crítico.
+  Desarrollado en la <strong>Sección 7.3 (Protocolo de Acción
+  Correctiva)</strong>.</li>
+  <li><strong>Establecer procedimientos de verificación.</strong>
+  Confirmar que el sistema funciona como se diseñó. Desarrollado
+  en la <strong>Sección 8 (Verificación y Revisión)</strong>.</li>
+  <li><strong>Establecer documentación y registros.</strong> Dejar
+  constancia por escrito de que los controles se aplicaron.
+  Desarrollado en la <strong>Sección 9 (Documentación y
+  Registros)</strong>.</li>
+</ol>
+
+<h2 id="sec-0-4">0.4 Qué es un punto crítico de control</h2>
+<p>Un <strong>punto crítico de control (PCC)</strong> es una etapa
+del proceso en la que puede aplicarse un control esencial para
+prevenir, eliminar o reducir un peligro a un nivel aceptable.</p>
+<p>La diferencia con un prerrequisito es que un PCC tiene un
+<strong>límite crítico medible</strong> (por ejemplo, ≥75°C), un
+<strong>monitoreo definido</strong> (qué, cómo, cuándo y quién) y
+una <strong>acción correctiva documentada</strong> si el límite
+no se cumple. Un prerrequisito, en cambio, es una condición
+general de higiene sin ese nivel de control puntual.</p>
+<p>Los PCC de este plan se determinaron aplicando el árbol de
+decisiones del Codex Alimentarius a cada etapa del proceso — ver
+<strong>Sección 6.1 (Árbol de Decisiones)</strong>.</p>
+
+<h2 id="sec-0-5">0.5 Clasificación de Órale</h2>
+<p>Órale se clasifica como <strong>operación de ALTO RIESGO</strong>
+<span class="badge-riesgo">HIGH-RISK</span>, conforme al FSAI
+Guidance Note No. 16 Food Stalls (Revision 2), por preparar,
+cocinar y vender directamente alimentos calientes que requieren
+control de temperatura.</p>
+<p>Esta clasificación implica requisitos adicionales de
+equipamiento, higiene personal, control de temperatura y
+registro: los requisitos generales de GN-16 §4.3 y los requisitos
+específicos para actividades de alto riesgo de GN-16 §5.1.</p>
+<p>La clasificación completa de Órale se declara en la
+<strong>Sección 1.4 (Clasificación de la Operación)</strong>.</p>
+
+<h2 id="sec-0-6">0.6 Marco legal</h2>
+<p>Este plan responde a las siguientes obligaciones legales:</p>
+<ul>
+  <li><strong>Reglamento (CE) N.º 852/2004, Artículo 5:</strong>
+  obliga a los operadores de empresa alimentaria a implantar
+  procedimientos permanentes basados en los principios HACCP.</li>
+  <li><strong>Transposición a derecho irlandés:</strong> European
+  Communities (Hygiene of Foodstuffs) Regulations 2006, S.I. No.
+  369 of 2006.</li>
+  <li><strong>FSAI Guidance Note No. 16 Food Stalls (Revision
+  2):</strong> guía de aplicación específica para puestos de
+  comida, usada como referencia normativa principal de este
+  plan.</li>
+  <li><strong>Reglamento (CE) N.º 178/2002:</strong> establece los
+  principios generales de la legislación alimentaria, incluida la
+  trazabilidad y la retirada de producto inseguro.</li>
+</ul>
+<p>El detalle del marco regulatorio aplicable a Órale se desarrolla
+en la <strong>Sección 1.3 (Marco Regulatorio Aplicable)</strong>.</p>
+
+<h2 id="sec-0-7">0.7 Cómo usar este plan</h2>
+<p>Este plan está pensado para consultarse, no solo para
+archivarse. Una orientación rápida:</p>
+<ul>
+  <li>Los <strong>procedimientos diarios</strong> de higiene,
+  limpieza y manejo de alimentos están en la <strong>Sección 10
+  (Programas Prerrequisito)</strong>, y los puntos de control
+  específicos con sus límites en la <strong>Sección 6 (Puntos
+  Críticos de Control)</strong>.</li>
+  <li>Los <strong>formatos de registro</strong> que deben llenarse
+  cada jornada están listados en la <strong>Sección 9
+  (Documentación y Registros)</strong> y disponibles completos en
+  la <strong>Sección 13 (Formatos HACCP)</strong>.</li>
+  <li>Ante una <strong>desviación</strong> de un límite crítico
+  (por ejemplo, una temperatura fuera de rango), seguir el
+  <strong>Protocolo de Acción Correctiva de la Sección
+  7.3</strong>.</li>
+</ul>
+`;
+
 const SECCION_1 = `
 <h2 id="sec-1-1">1.1 Propósito</h2>
 <p>El presente Plan HACCP ha sido elaborado conforme a los requisitos
@@ -3727,6 +3859,7 @@ durante la operación diaria.</p>
 `;
 
 const SECCIONES = {
+  'seccion-0': SECCION_0,
   'seccion-1': SECCION_1,
   'seccion-2': SECCION_2,
   'seccion-3': SECCION_3,

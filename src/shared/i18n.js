@@ -12,6 +12,15 @@ module.exports = {
       printFooterText: "Documento confidencial – Uso interno y regulatorio"
     },
     nav: {
+      s0: "0. Qué es HACCP",
+      s0_1: "0.1 Qué significa HACCP",
+      s0_2: "0.2 Prerrequisitos y HACCP",
+      s0_3: "0.3 Los siete principios del Codex Alimentarius",
+      s0_4: "0.4 Qué es un punto crítico de control",
+      s0_5: "0.5 Clasificación de Órale",
+      s0_6: "0.6 Marco legal",
+      s0_7: "0.7 Cómo usar este plan",
+
       s1: "1. Introducción y Alcance",
       s1_1: "1.1 Propósito",
       s1_2: "1.2 Alcance",
@@ -97,6 +106,15 @@ module.exports = {
       printFooterText: "Confidential document – Internal and regulatory use"
     },
     nav: {
+      s0: "0. What is HACCP",
+      s0_1: "0.1 What HACCP Means",
+      s0_2: "0.2 Prerequisites and HACCP",
+      s0_3: "0.3 The Seven Codex Alimentarius Principles",
+      s0_4: "0.4 What Is a Critical Control Point",
+      s0_5: "0.5 Órale's Classification",
+      s0_6: "0.6 Legal Framework",
+      s0_7: "0.7 How to Use This Plan",
+
       s1: "1. Introduction and Scope",
       s1_1: "1.1 Purpose",
       s1_2: "1.2 Scope",
