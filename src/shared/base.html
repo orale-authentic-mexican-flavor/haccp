@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ui.planLabel}} v{{version}} – {{empresa}}</title>
+  <link rel="stylesheet" href="shared/styles.css">
+  <style>
+    :root {
+      --print-header-text: "ÓRALE – AUTHENTIC MEXICAN FLAVOR LIMITED | {{ui.planLabel}} v{{version}} | CRO: {{cro}}";
+      --print-footer-text: "{{ui.printFooterText}}";
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =====================================================================
+       NAVEGACIÓN MÓVIL (botón hamburger + overlay del sidebar)
+       ===================================================================== -->
+  <button type="button" id="btn-hamburger" class="btn-hamburger" aria-label="Open navigation">☰</button>
+  <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+  <!-- =====================================================================
+       ENCABEZADO Y PIE DE IMPRESIÓN (solo visibles dentro de @media print,
+       ver styles.css .print-header/.print-footer). Su texto sale de las
+       custom properties --print-header-text / --print-footer-text
+       definidas arriba en el <style> del <head>. Sin este par de divs, las
+       reglas de styles.css no tienen a qué aplicarse y nunca se ven.
+       ===================================================================== -->
+  <div class="print-header"></div>
+  <div class="print-footer"></div>
+
+  <!-- =====================================================================
+       HEADER FIJO (solo pantalla, oculto en print via CSS)
+       ===================================================================== -->
+  <header class="header-fijo">
+    <div class="logo">
+      <span class="logo-rojo">ÓRALE</span>
+      <span class="logo-verde">AUTHENTIC MEXICAN FLAVOR</span>
+    </div>
+    <p class="subtexto-empresa">{{empresa}} | CRO: {{cro}}</p>
+    <p class="version-info">{{ui.planLabel}} v{{version}} | {{fechaEmision}}</p>
+  </header>
+
+  <!-- =====================================================================
+       BOTONES FIJOS (top right)
+       ===================================================================== -->
+  <div class="controles-vista">
+    <!-- BTN_IDIOMA -->
+    <button type="button" id="btn-imprimir" class="btn-imprimir">{{ui.btnImprimir}}</button>
+  </div>
+
+  <!-- =====================================================================
+       SIDEBAR NAVEGACIÓN
+       ===================================================================== -->
+  <nav class="sidebar">
+    <a class="nav-link" href="#seccion-1">{{nav.s1}}</a>
+    <a class="nav-link subseccion" href="#seccion-1">{{nav.s1_1}}</a>
+    <a class="nav-link subseccion" href="#seccion-1">{{nav.s1_2}}</a>
+    <a class="nav-link subseccion" href="#seccion-1">{{nav.s1_3}}</a>
+    <a class="nav-link subseccion" href="#seccion-1">{{nav.s1_4}}</a>
+
+    <a class="nav-link" href="#seccion-2">{{nav.s2}}</a>
+
+    <a class="nav-link" href="#seccion-3">{{nav.s3}}</a>
+    <a class="nav-link subseccion" href="#seccion-3">{{nav.s3_1}}</a>
+    <a class="nav-link subseccion" href="#seccion-3">{{nav.s3_2}}</a>
+
+    <a class="nav-link" href="#seccion-4">{{nav.s4}}</a>
+    <a class="nav-link subseccion" href="#seccion-4">{{nav.s4_1}}</a>
+    <a class="nav-link subseccion" href="#sec-4-2">{{nav.s4_2}}</a>
+    <a class="nav-link subseccion" href="#sec-4-3">{{nav.s4_3}}</a>
+
+    <a class="nav-link" href="#seccion-5">{{nav.s5}}</a>
+    <a class="nav-link subseccion" href="#seccion-5">{{nav.s5_1}}</a>
+    <a class="nav-link subseccion" href="#seccion-5">{{nav.s5_2}}</a>
+
+    <a class="nav-link" href="#seccion-6">{{nav.s6}}</a>
+    <a class="nav-link subseccion" href="#sec-6-1">{{nav.s6_1}}</a>
+    <a class="nav-link subseccion" href="#seccion-6">{{nav.pcc1}}</a>
+    <a class="nav-link subseccion" href="#pcc1b">{{nav.pcc1b}}</a>
+    <a class="nav-link subseccion" href="#seccion-6">{{nav.pcc2}}</a>
+    <a class="nav-link subseccion" href="#seccion-6">{{nav.pcc3}}</a>
+    <a class="nav-link subseccion" href="#pcc4">{{nav.pcc4}}</a>
+    <a class="nav-link subseccion" href="#pcc5">{{nav.pcc5}}</a>
+    <a class="nav-link subseccion" href="#pcc6">{{nav.pcc6}}</a>
+    <a class="nav-link subseccion" href="#pcc7">{{nav.pcc7}}</a>
+
+    <a class="nav-link" href="#seccion-7">{{nav.s7}}</a>
+    <a class="nav-link subseccion" href="#seccion-7">{{nav.s7_1}}</a>
+    <a class="nav-link subseccion" href="#seccion-7">{{nav.s7_2}}</a>
+    <a class="nav-link subseccion" href="#seccion-7">{{nav.s7_3}}</a>
+    <a class="nav-link subseccion" href="#sec-7-4">{{nav.s7_4}}</a>
+
+    <a class="nav-link" href="#seccion-8">{{nav.s8}}</a>
+    <a class="nav-link subseccion" href="#seccion-8">{{nav.s8_1}}</a>
+    <a class="nav-link subseccion" href="#seccion-8">{{nav.s8_2}}</a>
+
+    <a class="nav-link" href="#seccion-9">{{nav.s9}}</a>
+    <a class="nav-link subseccion" href="#seccion-9">{{nav.s9_1}}</a>
+
+    <a class="nav-link" href="#seccion-10">{{nav.s10}}</a>
+    <a class="nav-link subseccion" href="#seccion-10">{{nav.s10_1}}</a>
+    <a class="nav-link subseccion" href="#seccion-10">{{nav.s10_2}}</a>
+    <a class="nav-link subseccion" href="#seccion-10">{{nav.s10_3}}</a>
+    <a class="nav-link subseccion" href="#sec-10-3b">{{nav.s10_3b}}</a>
+    <a class="nav-link subseccion" href="#seccion-10">{{nav.s10_4}}</a>
+    <a class="nav-link subseccion" href="#seccion-10">{{nav.s10_5}}</a>
+    <a class="nav-link subseccion" href="#seccion-10">{{nav.s10_6}}</a>
+    <a class="nav-link subseccion" href="#sec-10-7">{{nav.s10_7}}</a>
+
+    <a class="nav-link" href="#seccion-11">{{nav.s11}}</a>
+    <a class="nav-link subseccion" href="#seccion-11">{{nav.s11_1}}</a>
+    <a class="nav-link subseccion" href="#seccion-11">{{nav.s11_2}}</a>
+
+    <a class="nav-link" href="#seccion-12">{{nav.s12}}</a>
+    <a class="nav-link subseccion" href="#seccion-12">{{nav.s12_1}}</a>
+    <a class="nav-link subseccion" href="#sec-12-2">{{nav.s12_2}}</a>
+
+    <a class="nav-link" href="#seccion-13">{{nav.s13}}</a>
+    <a class="nav-link subseccion" href="#seccion-13">{{nav.s13_1}}</a>
+    <a class="nav-link subseccion" href="#haccp-10">{{nav.haccp10}}</a>
+    <a class="nav-link subseccion" href="#haccp-11">{{nav.haccp11}}</a>
+    <a class="nav-link subseccion" href="#haccp-12">{{nav.haccp12}}</a>
+
+    <a class="nav-link" href="#seccion-14">{{nav.s14}}</a>
+
+    <a class="nav-link" href="#formatos-resumen">{{nav.formatosResumen}}</a>
+
+    <a class="nav-link" href="#anexo">{{nav.anexo}}</a>
+  </nav>
+
+  <!-- =====================================================================
+       CONTENIDO PRINCIPAL
+       ===================================================================== -->
+  <main class="contenido">
+
+    <section id="seccion-1" class="seccion">
+      <h1>{{nav.s1}}</h1>
+      <div class="seccion-contenido"></div>
+    </section>
+
+    <section id="seccion-2" class="seccion">
+      <h1>{{nav.s2}}</h1>
+      <div class="seccion-contenido"></div>
+    </section>
+
+    <section id="seccion-3" class="seccion">
+      <h1>{{nav.s3}}</h1>
+      <div class="seccion-contenido"></div>
+    </section>
+
+    <section id="seccion-4" class="seccion">
+      <h1>{{nav.s4}}</h1>
+      <div class="seccion-contenido"></div>
+    </section>
+
+    <section id="seccion-5" class="seccion">
+      <h1>{{nav.s5}}</h1>
+      <div class="seccion-contenido"></div>
+    </section>
+
+    <section id="seccion-6" class="seccion">
+      <h1>{{nav.s6}}</h1>
+      <div class="seccion-contenido"></div>
+    </section>
+
+    <section id="seccion-7" class="seccion">
+      <h1>{{nav.s7}}</h1>
+      <div class="seccion-contenido"></div>
+    </section>
+
+    <section id="seccion-8" class="seccion">
+      <h1>{{nav.s8}}</h1>
+      <div class="seccion-contenido"></div>
+    </section>
+
+    <section id="seccion-9" class="seccion">
+      <h1>{{nav.s9}}</h1>
+      <div class="seccion-contenido"></div>
+    </section>
+
+    <section id="seccion-10" class="seccion">
+      <h1>{{nav.s10}}</h1>
+      <div class="seccion-contenido"></div>
+    </section>
+
+    <section id="seccion-11" class="seccion">
+      <h1>{{nav.s11}}</h1>
+      <div class="seccion-contenido"></div>
+    </section>
+
+    <section id="seccion-12" class="seccion">
+      <h1>{{nav.s12}}</h1>
+      <div class="seccion-contenido"></div>
+    </section>
+
+    <section id="seccion-13" class="seccion">
+      <h1>{{nav.s13}}</h1>
+      <div class="seccion-contenido"></div>
+    </section>
+
+    <section id="seccion-14" class="seccion">
+      <h1>{{nav.s14}}</h1>
+      <div class="seccion-contenido"></div>
+    </section>
+
+    <section id="formatos-resumen" class="seccion">
+      <h1>{{nav.formatosResumen}}</h1>
+      <div class="seccion-contenido"></div>
+    </section>
+
+    <section id="anexo" class="seccion">
+      <h1>{{nav.anexo}}</h1>
+      <div class="seccion-contenido"></div>
+    </section>
+
+    <!-- ===================================================================
+         FOOTER DEL DOCUMENTO
+         NOTA: se usa la clase "pie-documento" (no "print-footer") porque
+         "print-footer" ya está definida en styles.css como el pie FIJO que
+         se repite en cada página impresa (con su propio texto generado por
+         CSS vía ::after). Reutilizar ese nombre aquí duplicaría el texto y
+         forzaría position:fixed sobre este footer de una sola vez al final
+         del documento.
+         =================================================================== -->
+    <footer class="pie-documento">
+      {{empresa}} · CRO {{cro}} · {{contacto.email}} · {{contacto.telefono}}
+    </footer>
+
+  </main>
+
+  <!-- =====================================================================
+       SCRIPTS
+       ===================================================================== -->
+
+  <!-- Botón imprimir -->
+  <script>
+    (function () {
+      var btnImprimir = document.getElementById('btn-imprimir');
+
+      btnImprimir.addEventListener('click', function () {
+        window.print();
+      });
+    })();
+  </script>
+
+  <!-- Sección activa en sidebar mediante IntersectionObserver -->
+  <script>
+    (function () {
+      var navLinks = document.querySelectorAll('.sidebar .nav-link');
+      var secciones = document.querySelectorAll('.contenido .seccion');
+      var sidebar = document.querySelector('.sidebar');
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          var id = entry.target.id;
+          var activeLink = null;
+          navLinks.forEach(function (link) {
+            var esActivo = link.getAttribute('href') === '#' + id;
+            link.classList.toggle('activo', esActivo);
+            if (esActivo) activeLink = link;
+          });
+
+          /* Auto-scroll del sidebar para mantener visible el link activo
+             dentro del panel de navegación cuando cambia de sección. */
+          if (activeLink && sidebar) {
+            var linkTop = activeLink.offsetTop;
+            var linkHeight = activeLink.offsetHeight;
+            var sidebarScrollTop = sidebar.scrollTop;
+            var sidebarHeight = sidebar.clientHeight;
+
+            if (linkTop < sidebarScrollTop ||
+                linkTop + linkHeight > sidebarScrollTop + sidebarHeight) {
+              sidebar.scrollTo({
+                top: linkTop - sidebarHeight / 2 + linkHeight / 2,
+                behavior: 'smooth'
+              });
+            }
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '-10% 0px -80% 0px' });
+      /* threshold bajo (0.1) en vez de 0.3: en viewports móviles las
+         secciones son más altas que el viewport, así que 0.3 de área
+         visible tarda en alcanzarse y la sección activa se queda
+         desactualizada al hacer scroll. Esto se sigue calculando aunque
+         el sidebar esté cerrado, para que al abrirlo ya esté resaltada
+         la sección correcta. */
+
+      secciones.forEach(function (seccion) {
+        observer.observe(seccion);
+      });
+    })();
+  </script>
+
+  <!-- Sidebar responsive: hamburger, overlay y cierre al navegar (móvil) -->
+  <script>
+    (function () {
+      var hamburger = document.getElementById('btn-hamburger');
+      var sidebar = document.querySelector('.sidebar');
+      var overlay = document.getElementById('sidebar-overlay');
+
+      function openSidebar() {
+        sidebar.classList.add('sidebar-open');
+        overlay.classList.add('visible');
+        hamburger.textContent = '✕';
+        hamburger.setAttribute('aria-label', 'Close navigation');
+      }
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar-open');
+        overlay.classList.remove('visible');
+        hamburger.textContent = '☰';
+        hamburger.setAttribute('aria-label', 'Open navigation');
+      }
+
+      hamburger.addEventListener('click', function () {
+        if (sidebar.classList.contains('sidebar-open')) {
+          closeSidebar();
+        } else {
+          openSidebar();
+        }
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      document.querySelectorAll('.sidebar .nav-link, .sidebar .subseccion').forEach(function (link) {
+        link.addEventListener('click', function () {
+          if (window.innerWidth < 768) closeSidebar();
+        });
+      });
+    })();
+  </script>
+
+  <script src="shared/print-pagination.js"></script>
+
+</body>
+</html>
