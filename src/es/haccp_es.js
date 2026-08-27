@@ -306,23 +306,24 @@ const SECCION_2 = `
   </thead>
   <tbody>
     <tr>
-      <td>Director / HACCP Manager</td>
+      <td>Founder & Director</td>
       <td>{{responsables.director}}</td>
       <td>
         <ul>
-          <li>Responsable principal del plan</li>
-          <li>Revisión y actualización del documento</li>
-          <li>Auditorías internas</li>
-          <li>Contacto con HSE y FSAI</li>
-          <li>Coordinación de inspección de cocina doméstica</li>
+          <li>Dirección y administración general de la empresa</li>
         </ul>
       </td>
     </tr>
     <tr class="alt">
-      <td>Operations & Compliance Manager</td>
+      <td>Operations & Compliance Manager / HACCP Manager</td>
       <td>{{responsables.operaciones}}</td>
       <td>
         <ul>
+          <li>Responsable principal del plan HACCP</li>
+          <li>Revisión y actualización del documento</li>
+          <li>Auditorías internas</li>
+          <li>Contacto con HSE y FSAI</li>
+          <li>Coordinación de inspección de cocina doméstica</li>
           <li>Supervisión diaria del punto de venta</li>
           <li>Implementación y mantenimiento del plan HACCP</li>
           <li>Registros de temperatura y control de compras</li>
@@ -348,16 +349,21 @@ const SECCION_2 = `
   </tbody>
 </table>
 </div>
-<p class="nota"><em><strong>Formación del equipo.</strong> Los tres
-miembros del equipo han completado el curso "Food Safety Level 1
-– HACCP Training", que cubre peligros alimentarios y
-contaminación, factores de crecimiento bacteriano, intoxicación
-e infección alimentaria, prerrequisitos del sistema HACCP, salud
-e higiene personal, transporte, distribución y almacenamiento,
-preparación de alimentos, limpieza y desinfección, control de
-plagas, y legislación de seguridad alimentaria. Esta formación
-satisface el requisito de GN-16 §4.3.13 aplicable a los
-manipuladores de alimentos.</em></p>
+<p class="nota"><em><strong>Formación del equipo.</strong> Las
+personas que manipulan alimento en Órale son {{responsables.chef}},
+responsable de cocina, y {{responsables.operaciones}}, Operations
+& Compliance Manager y HACCP Manager. Ambos han completado el
+curso "Food Safety Level 1 – HACCP Training", que cubre peligros
+alimentarios y contaminación, factores de crecimiento bacteriano,
+intoxicación e infección alimentaria, prerrequisitos del sistema
+HACCP, salud e higiene personal, transporte, distribución y
+almacenamiento, preparación de alimentos, limpieza y
+desinfección, control de plagas, y legislación de seguridad
+alimentaria. Esta formación satisface el requisito de GN-16
+§4.3.13 aplicable a los manipuladores de alimentos.</em></p>
+<p class="nota"><em>{{responsables.director}}, Founder &amp;
+Director, no participa en la manipulación de alimentos. Sus
+funciones son de dirección y administración.</em></p>
 <p class="nota"><em>GN-16 §4.3.13 exige además que quien
 desarrolla y mantiene los procedimientos basados en principios
 HACCP haya recibido formación en la aplicación de dichos
@@ -2075,7 +2081,7 @@ investigación en todos los casos.</p>
   descartarse.</li>
   <li>Registrar la desviación, la acción tomada y el resultado
   en el formato correspondiente.</li>
-  <li>Informar al Director / HACCP Manager en el mismo turno.</li>
+  <li>Informar al HACCP Manager en el mismo turno.</li>
   <li>Revisar la causa raíz para implementar medidas preventivas.</li>
 </ol>
 <p class="nota"><em>Excepción — desviación de PCC2 (enfriamiento
@@ -2129,7 +2135,7 @@ const SECCION_8 = `
       <td>Verificar que todas las hojas de control estén completas
       y sin valores fuera de límite sin corrección documentada.</td>
       <td>Semanal</td>
-      <td>{{responsables.director}} / {{responsables.chef}}</td>
+      <td>{{responsables.operaciones}} / {{responsables.chef}}</td>
     </tr>
     <tr class="alt">
       <td>Calibración de termómetros</td>
@@ -2146,21 +2152,21 @@ const SECCION_8 = `
       <td>Verificación de toda la cadena: cocina doméstica,
       transporte y punto de venta.</td>
       <td>Trimestral</td>
-      <td>{{responsables.director}}</td>
+      <td>{{responsables.operaciones}}</td>
     </tr>
     <tr class="alt">
       <td>Revisión del plan HACCP</td>
       <td>Actualizar ante: cambios de menú, cambio de cocina,
       nuevo personal, quejas o inspección HSE.</td>
       <td>Semestral o ante cambio</td>
-      <td>{{responsables.director}}</td>
+      <td>{{responsables.operaciones}}</td>
     </tr>
     <tr>
       <td>Inspección HSE</td>
       <td>Cooperar plenamente. Presentar todos los registros.
       Implementar correcciones en plazos indicados.</td>
       <td>Según requerimiento</td>
-      <td>{{responsables.director}} / {{responsables.chef}}</td>
+      <td>{{responsables.operaciones}} / {{responsables.chef}}</td>
     </tr>
   </tbody>
 </table>

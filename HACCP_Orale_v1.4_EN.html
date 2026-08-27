@@ -431,23 +431,24 @@ target="_blank">fsai.ie</a></em></p>
   </thead>
   <tbody>
     <tr>
-      <td>Director / HACCP Manager</td>
+      <td>Founder & Director</td>
       <td>Vicente Rodriguez Hernandez</td>
       <td>
         <ul>
-          <li>Main person responsible for the plan</li>
-          <li>Review and update of the document</li>
-          <li>Internal audits</li>
-          <li>Contact with HSE and FSAI</li>
-          <li>Coordination of domestic kitchen inspection</li>
+          <li>General direction and administration of the business</li>
         </ul>
       </td>
     </tr>
     <tr class="alt">
-      <td>Operations & Compliance Manager</td>
+      <td>Operations & Compliance Manager / HACCP Manager</td>
       <td>David Enrique Ochoa Diaz</td>
       <td>
         <ul>
+          <li>Main person responsible for the HACCP plan</li>
+          <li>Review and update of the document</li>
+          <li>Internal audits</li>
+          <li>Contact with HSE and FSAI</li>
+          <li>Coordination of domestic kitchen inspection</li>
           <li>Daily supervision of the point of sale</li>
           <li>Implementation and maintenance of the HACCP plan</li>
           <li>Temperature records and purchasing control</li>
@@ -473,15 +474,20 @@ target="_blank">fsai.ie</a></em></p>
   </tbody>
 </table>
 </div>
-<p class="nota"><em><strong>Team training.</strong> All three team
-members have completed the "Food Safety Level 1 – HACCP
-Training" course, covering food hazards and contamination,
+<p class="nota"><em><strong>Team training.</strong> The people who
+handle food at Órale are Aracely Sansores Gongora, Kitchen Lead, and
+David Enrique Ochoa Diaz, Operations & Compliance Manager and
+HACCP Manager. Both have completed the "Food Safety Level 1 –
+HACCP Training" course, covering food hazards and contamination,
 factors for bacterial growth, food poisoning and infection,
 prerequisites of the HACCP system, personal health and hygiene,
 transport, distribution and storage, food preparation, cleaning
 and disinfection, pest control, and food safety legislation.
 This training satisfies the GN-16 §4.3.13 requirement applicable
 to food handlers.</em></p>
+<p class="nota"><em>Vicente Rodriguez Hernandez, Founder &amp;
+Director, does not take part in food handling. Their
+responsibilities are executive and administrative.</em></p>
 <p class="nota"><em>GN-16 §4.3.13 further requires that whoever
 develops and maintains the procedures based on HACCP principles
 has received training in the application of those principles.
@@ -2181,7 +2187,7 @@ procedure in every case.</p>
   must be discarded.</li>
   <li>Record the deviation, the action taken and the outcome on
   the corresponding form.</li>
-  <li>Inform the Director / HACCP Manager during the same shift.</li>
+  <li>Inform the HACCP Manager during the same shift.</li>
   <li>Review the root cause to implement preventive measures.</li>
 </ol>
 <p class="nota"><em>Exception — CCP2 (rapid cooling) deviation:
@@ -2239,7 +2245,7 @@ HSE must be notified.</p>
       <td>Verify that all control sheets are complete and free
       of out-of-limit values without a documented correction.</td>
       <td>Weekly</td>
-      <td>Vicente Rodriguez Hernandez / Aracely Sansores Gongora</td>
+      <td>David Enrique Ochoa Diaz / Aracely Sansores Gongora</td>
     </tr>
     <tr class="alt">
       <td>Thermometer calibration</td>
@@ -2256,21 +2262,21 @@ HSE must be notified.</p>
       <td>Verification of the whole chain: domestic kitchen,
       transport and point of sale.</td>
       <td>Quarterly</td>
-      <td>Vicente Rodriguez Hernandez</td>
+      <td>David Enrique Ochoa Diaz</td>
     </tr>
     <tr class="alt">
       <td>HACCP plan review</td>
       <td>Update following: menu changes, a change of kitchen,
       new staff, complaints or an HSE inspection.</td>
       <td>Every 6 months or on change</td>
-      <td>Vicente Rodriguez Hernandez</td>
+      <td>David Enrique Ochoa Diaz</td>
     </tr>
     <tr>
       <td>HSE inspection</td>
       <td>Cooperate fully. Present all records. Implement
       corrections within the indicated timeframes.</td>
       <td>As required</td>
-      <td>Vicente Rodriguez Hernandez / Aracely Sansores Gongora</td>
+      <td>David Enrique Ochoa Diaz / Aracely Sansores Gongora</td>
     </tr>
   </tbody>
 </table>
@@ -4171,55 +4177,6 @@ Limerick.</em></p>
     })();
   </script>
 
-  <!-- Sección activa en sidebar mediante IntersectionObserver -->
-  <script>
-    (function () {
-      var navLinks = document.querySelectorAll('.sidebar .nav-link');
-      var secciones = document.querySelectorAll('.contenido .seccion');
-      var sidebar = document.querySelector('.sidebar');
-
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting) return;
-          var id = entry.target.id;
-          var activeLink = null;
-          navLinks.forEach(function (link) {
-            var esActivo = link.getAttribute('href') === '#' + id;
-            link.classList.toggle('activo', esActivo);
-            if (esActivo) activeLink = link;
-          });
-
-          /* Auto-scroll del sidebar para mantener visible el link activo
-             dentro del panel de navegación cuando cambia de sección. */
-          if (activeLink && sidebar) {
-            var linkTop = activeLink.offsetTop;
-            var linkHeight = activeLink.offsetHeight;
-            var sidebarScrollTop = sidebar.scrollTop;
-            var sidebarHeight = sidebar.clientHeight;
-
-            if (linkTop < sidebarScrollTop ||
-                linkTop + linkHeight > sidebarScrollTop + sidebarHeight) {
-              sidebar.scrollTo({
-                top: linkTop - sidebarHeight / 2 + linkHeight / 2,
-                behavior: 'smooth'
-              });
-            }
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '-10% 0px -80% 0px' });
-      /* threshold bajo (0.1) en vez de 0.3: en viewports móviles las
-         secciones son más altas que el viewport, así que 0.3 de área
-         visible tarda en alcanzarse y la sección activa se queda
-         desactualizada al hacer scroll. Esto se sigue calculando aunque
-         el sidebar esté cerrado, para que al abrirlo ya esté resaltada
-         la sección correcta. */
-
-      secciones.forEach(function (seccion) {
-        observer.observe(seccion);
-      });
-    })();
-  </script>
-
   <!-- Sidebar responsive: hamburger, overlay y cierre al navegar (móvil) -->
   <script>
     (function () {
@@ -4259,6 +4216,7 @@ Limerick.</em></p>
     })();
   </script>
 
+  <script src="shared/scroll-spy.js" defer></script>
   <script src="shared/print-pagination.js"></script>
 
 </body>

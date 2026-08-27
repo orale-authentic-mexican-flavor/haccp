@@ -297,23 +297,24 @@ const SECCION_2 = `
   </thead>
   <tbody>
     <tr>
-      <td>Director / HACCP Manager</td>
+      <td>Founder & Director</td>
       <td>{{responsables.director}}</td>
       <td>
         <ul>
-          <li>Main person responsible for the plan</li>
-          <li>Review and update of the document</li>
-          <li>Internal audits</li>
-          <li>Contact with HSE and FSAI</li>
-          <li>Coordination of domestic kitchen inspection</li>
+          <li>General direction and administration of the business</li>
         </ul>
       </td>
     </tr>
     <tr class="alt">
-      <td>Operations & Compliance Manager</td>
+      <td>Operations & Compliance Manager / HACCP Manager</td>
       <td>{{responsables.operaciones}}</td>
       <td>
         <ul>
+          <li>Main person responsible for the HACCP plan</li>
+          <li>Review and update of the document</li>
+          <li>Internal audits</li>
+          <li>Contact with HSE and FSAI</li>
+          <li>Coordination of domestic kitchen inspection</li>
           <li>Daily supervision of the point of sale</li>
           <li>Implementation and maintenance of the HACCP plan</li>
           <li>Temperature records and purchasing control</li>
@@ -339,15 +340,20 @@ const SECCION_2 = `
   </tbody>
 </table>
 </div>
-<p class="nota"><em><strong>Team training.</strong> All three team
-members have completed the "Food Safety Level 1 – HACCP
-Training" course, covering food hazards and contamination,
+<p class="nota"><em><strong>Team training.</strong> The people who
+handle food at Órale are {{responsables.chef}}, Kitchen Lead, and
+{{responsables.operaciones}}, Operations & Compliance Manager and
+HACCP Manager. Both have completed the "Food Safety Level 1 –
+HACCP Training" course, covering food hazards and contamination,
 factors for bacterial growth, food poisoning and infection,
 prerequisites of the HACCP system, personal health and hygiene,
 transport, distribution and storage, food preparation, cleaning
 and disinfection, pest control, and food safety legislation.
 This training satisfies the GN-16 §4.3.13 requirement applicable
 to food handlers.</em></p>
+<p class="nota"><em>{{responsables.director}}, Founder &amp;
+Director, does not take part in food handling. Their
+responsibilities are executive and administrative.</em></p>
 <p class="nota"><em>GN-16 §4.3.13 further requires that whoever
 develops and maintains the procedures based on HACCP principles
 has received training in the application of those principles.
@@ -2032,7 +2038,7 @@ procedure in every case.</p>
   must be discarded.</li>
   <li>Record the deviation, the action taken and the outcome on
   the corresponding form.</li>
-  <li>Inform the Director / HACCP Manager during the same shift.</li>
+  <li>Inform the HACCP Manager during the same shift.</li>
   <li>Review the root cause to implement preventive measures.</li>
 </ol>
 <p class="nota"><em>Exception — CCP2 (rapid cooling) deviation:
@@ -2087,7 +2093,7 @@ const SECCION_8 = `
       <td>Verify that all control sheets are complete and free
       of out-of-limit values without a documented correction.</td>
       <td>Weekly</td>
-      <td>{{responsables.director}} / {{responsables.chef}}</td>
+      <td>{{responsables.operaciones}} / {{responsables.chef}}</td>
     </tr>
     <tr class="alt">
       <td>Thermometer calibration</td>
@@ -2104,21 +2110,21 @@ const SECCION_8 = `
       <td>Verification of the whole chain: domestic kitchen,
       transport and point of sale.</td>
       <td>Quarterly</td>
-      <td>{{responsables.director}}</td>
+      <td>{{responsables.operaciones}}</td>
     </tr>
     <tr class="alt">
       <td>HACCP plan review</td>
       <td>Update following: menu changes, a change of kitchen,
       new staff, complaints or an HSE inspection.</td>
       <td>Every 6 months or on change</td>
-      <td>{{responsables.director}}</td>
+      <td>{{responsables.operaciones}}</td>
     </tr>
     <tr>
       <td>HSE inspection</td>
       <td>Cooperate fully. Present all records. Implement
       corrections within the indicated timeframes.</td>
       <td>As required</td>
-      <td>{{responsables.director}} / {{responsables.chef}}</td>
+      <td>{{responsables.operaciones}} / {{responsables.chef}}</td>
     </tr>
   </tbody>
 </table>
