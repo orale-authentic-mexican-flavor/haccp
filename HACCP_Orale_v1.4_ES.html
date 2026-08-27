@@ -440,23 +440,24 @@ target="_blank">fsai.ie</a></em></p>
   </thead>
   <tbody>
     <tr>
-      <td>Director / HACCP Manager</td>
+      <td>Founder & Director</td>
       <td>Vicente Rodriguez Hernandez</td>
       <td>
         <ul>
-          <li>Responsable principal del plan</li>
-          <li>Revisión y actualización del documento</li>
-          <li>Auditorías internas</li>
-          <li>Contacto con HSE y FSAI</li>
-          <li>Coordinación de inspección de cocina doméstica</li>
+          <li>Dirección y administración general de la empresa</li>
         </ul>
       </td>
     </tr>
     <tr class="alt">
-      <td>Operations & Compliance Manager</td>
+      <td>Operations & Compliance Manager / HACCP Manager</td>
       <td>David Enrique Ochoa Diaz</td>
       <td>
         <ul>
+          <li>Responsable principal del plan HACCP</li>
+          <li>Revisión y actualización del documento</li>
+          <li>Auditorías internas</li>
+          <li>Contacto con HSE y FSAI</li>
+          <li>Coordinación de inspección de cocina doméstica</li>
           <li>Supervisión diaria del punto de venta</li>
           <li>Implementación y mantenimiento del plan HACCP</li>
           <li>Registros de temperatura y control de compras</li>
@@ -482,16 +483,21 @@ target="_blank">fsai.ie</a></em></p>
   </tbody>
 </table>
 </div>
-<p class="nota"><em><strong>Formación del equipo.</strong> Los tres
-miembros del equipo han completado el curso "Food Safety Level 1
-– HACCP Training", que cubre peligros alimentarios y
-contaminación, factores de crecimiento bacteriano, intoxicación
-e infección alimentaria, prerrequisitos del sistema HACCP, salud
-e higiene personal, transporte, distribución y almacenamiento,
-preparación de alimentos, limpieza y desinfección, control de
-plagas, y legislación de seguridad alimentaria. Esta formación
-satisface el requisito de GN-16 §4.3.13 aplicable a los
-manipuladores de alimentos.</em></p>
+<p class="nota"><em><strong>Formación del equipo.</strong> Las
+personas que manipulan alimento en Órale son Aracely Sansores Gongora,
+responsable de cocina, y David Enrique Ochoa Diaz, Operations
+& Compliance Manager y HACCP Manager. Ambos han completado el
+curso "Food Safety Level 1 – HACCP Training", que cubre peligros
+alimentarios y contaminación, factores de crecimiento bacteriano,
+intoxicación e infección alimentaria, prerrequisitos del sistema
+HACCP, salud e higiene personal, transporte, distribución y
+almacenamiento, preparación de alimentos, limpieza y
+desinfección, control de plagas, y legislación de seguridad
+alimentaria. Esta formación satisface el requisito de GN-16
+§4.3.13 aplicable a los manipuladores de alimentos.</em></p>
+<p class="nota"><em>Vicente Rodriguez Hernandez, Founder &amp;
+Director, no participa en la manipulación de alimentos. Sus
+funciones son de dirección y administración.</em></p>
 <p class="nota"><em>GN-16 §4.3.13 exige además que quien
 desarrolla y mantiene los procedimientos basados en principios
 HACCP haya recibido formación en la aplicación de dichos
@@ -2224,7 +2230,7 @@ investigación en todos los casos.</p>
   descartarse.</li>
   <li>Registrar la desviación, la acción tomada y el resultado
   en el formato correspondiente.</li>
-  <li>Informar al Director / HACCP Manager en el mismo turno.</li>
+  <li>Informar al HACCP Manager en el mismo turno.</li>
   <li>Revisar la causa raíz para implementar medidas preventivas.</li>
 </ol>
 <p class="nota"><em>Excepción — desviación de PCC2 (enfriamiento
@@ -2281,7 +2287,7 @@ de la retirada, recuperarse el producto y notificarse al HSE.</p>
       <td>Verificar que todas las hojas de control estén completas
       y sin valores fuera de límite sin corrección documentada.</td>
       <td>Semanal</td>
-      <td>Vicente Rodriguez Hernandez / Aracely Sansores Gongora</td>
+      <td>David Enrique Ochoa Diaz / Aracely Sansores Gongora</td>
     </tr>
     <tr class="alt">
       <td>Calibración de termómetros</td>
@@ -2298,21 +2304,21 @@ de la retirada, recuperarse el producto y notificarse al HSE.</p>
       <td>Verificación de toda la cadena: cocina doméstica,
       transporte y punto de venta.</td>
       <td>Trimestral</td>
-      <td>Vicente Rodriguez Hernandez</td>
+      <td>David Enrique Ochoa Diaz</td>
     </tr>
     <tr class="alt">
       <td>Revisión del plan HACCP</td>
       <td>Actualizar ante: cambios de menú, cambio de cocina,
       nuevo personal, quejas o inspección HSE.</td>
       <td>Semestral o ante cambio</td>
-      <td>Vicente Rodriguez Hernandez</td>
+      <td>David Enrique Ochoa Diaz</td>
     </tr>
     <tr>
       <td>Inspección HSE</td>
       <td>Cooperar plenamente. Presentar todos los registros.
       Implementar correcciones en plazos indicados.</td>
       <td>Según requerimiento</td>
-      <td>Vicente Rodriguez Hernandez / Aracely Sansores Gongora</td>
+      <td>David Enrique Ochoa Diaz / Aracely Sansores Gongora</td>
     </tr>
   </tbody>
 </table>
@@ -4253,55 +4259,6 @@ Health, Limerick.</em></p>
     })();
   </script>
 
-  <!-- Sección activa en sidebar mediante IntersectionObserver -->
-  <script>
-    (function () {
-      var navLinks = document.querySelectorAll('.sidebar .nav-link');
-      var secciones = document.querySelectorAll('.contenido .seccion');
-      var sidebar = document.querySelector('.sidebar');
-
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting) return;
-          var id = entry.target.id;
-          var activeLink = null;
-          navLinks.forEach(function (link) {
-            var esActivo = link.getAttribute('href') === '#' + id;
-            link.classList.toggle('activo', esActivo);
-            if (esActivo) activeLink = link;
-          });
-
-          /* Auto-scroll del sidebar para mantener visible el link activo
-             dentro del panel de navegación cuando cambia de sección. */
-          if (activeLink && sidebar) {
-            var linkTop = activeLink.offsetTop;
-            var linkHeight = activeLink.offsetHeight;
-            var sidebarScrollTop = sidebar.scrollTop;
-            var sidebarHeight = sidebar.clientHeight;
-
-            if (linkTop < sidebarScrollTop ||
-                linkTop + linkHeight > sidebarScrollTop + sidebarHeight) {
-              sidebar.scrollTo({
-                top: linkTop - sidebarHeight / 2 + linkHeight / 2,
-                behavior: 'smooth'
-              });
-            }
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '-10% 0px -80% 0px' });
-      /* threshold bajo (0.1) en vez de 0.3: en viewports móviles las
-         secciones son más altas que el viewport, así que 0.3 de área
-         visible tarda en alcanzarse y la sección activa se queda
-         desactualizada al hacer scroll. Esto se sigue calculando aunque
-         el sidebar esté cerrado, para que al abrirlo ya esté resaltada
-         la sección correcta. */
-
-      secciones.forEach(function (seccion) {
-        observer.observe(seccion);
-      });
-    })();
-  </script>
-
   <!-- Sidebar responsive: hamburger, overlay y cierre al navegar (móvil) -->
   <script>
     (function () {
@@ -4341,6 +4298,7 @@ Health, Limerick.</em></p>
     })();
   </script>
 
+  <script src="shared/scroll-spy.js" defer></script>
   <script src="shared/print-pagination.js"></script>
 
 </body>
