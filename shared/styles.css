@@ -425,6 +425,55 @@ ul li::marker {
 }
 
 /* =========================================================================
+   ÍNDICE DE CONTENIDOS (#indice)
+   Lista anidada de enlaces, sin números de página. Los textos ya llevan
+   su numeración (nav.* en i18n.js), por eso se quitan las viñetas.
+   ========================================================================= */
+
+.indice-lista,
+.indice-lista ul {
+  list-style: none;
+  margin: 0;
+}
+
+.indice-lista {
+  padding-left: 0;
+  line-height: 1.6;
+}
+
+.indice-lista ul {
+  padding-left: 1.5rem;
+}
+
+.indice-lista li {
+  margin: 0;
+}
+
+.indice-lista > li {
+  margin-top: 0.5rem;
+}
+
+.indice-lista > li > a {
+  font-weight: bold;
+  color: var(--color-verde);
+}
+
+.indice-lista ul a {
+  font-weight: normal;
+  color: var(--color-gris-oscuro);
+}
+
+.indice-lista a {
+  text-decoration: none;
+}
+
+.indice-lista a:hover,
+.indice-lista a:focus {
+  text-decoration: underline;
+  color: var(--color-rojo);
+}
+
+/* =========================================================================
    TABLAS RESPONSIVE — scroll horizontal + primera columna sticky
    ========================================================================= */
 
@@ -748,6 +797,27 @@ table th {
   a {
     text-decoration: none;
     color: inherit;
+  }
+
+  /* Índice: interlineado compacto y cada capítulo (li de primer nivel)
+     sin partir entre páginas. El salto de página después del índice lo
+     da la regla ".seccion ~ .seccion h1" de arriba (h1 de seccion-0). */
+  .indice-lista {
+    line-height: 1.35;
+  }
+
+  .indice-lista > li {
+    margin-top: 0.3rem;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* En papel, todos los enlaces del índice en negro (en pantalla mantienen
+     verde/gris). Selectores con la misma especificidad que los de pantalla
+     para poder anularlos. */
+  .indice-lista > li > a,
+  .indice-lista ul a {
+    color: #000;
   }
 
   /* Al imprimir, los checkboxes se ven como cuadrados vacíos —

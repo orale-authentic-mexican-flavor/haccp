@@ -9,6 +9,7 @@ module.exports = {
     ui: {
       planLabel: "Plan HACCP",
       btnImprimir: "Imprimir",
+      indice: "Índice",
       printFooterText: "Documento confidencial – Uso interno y regulatorio"
     },
     nav: {
@@ -84,14 +85,26 @@ module.exports = {
       s12: "12. Consideraciones Específicas",
       s12_1: "12.1 Cocina Doméstica y Venta en Calle",
       s12_2: "12.2 Entrega a Domicilio (WhatsApp)",
+      s12_3: "12.3 Catering bajo Encargo",
 
       s13: "13. Formatos HACCP",
-      s13_1: "HACCP-01 al HACCP-09",
-      haccp10: "HACCP-10",
-      haccp11: "HACCP-11",
-      haccp12: "HACCP-12",
+      s13_1: "13.1 Formatos de Registro (HACCP-01 a HACCP-12)",
+      haccp01: "HACCP-01 – Control de Temperaturas de Cocción",
+      haccp02: "HACCP-02 – Control de Enfriamiento Rápido",
+      haccp03: "HACCP-03 – Control de Temperatura en Servicio",
+      haccp04: "HACCP-04 — Control de Compras y Trazabilidad de Proveedor",
+      haccp05: "HACCP-05 – Control de Temperatura del Refrigerador",
+      haccp06: "HACCP-06 – Registro de Limpieza y Desinfección Diaria",
+      haccp07: "HACCP-07 – Registro de Incidentes y Acciones Correctivas",
+      haccp08: "HACCP-08 – Registro de Calibración de Termómetros",
+      haccp09: "HACCP-09 – Registro de Formación del Personal",
+      haccp10: "HACCP-10 — Control de Temperatura del Congelador",
+      haccp11: "HACCP-11 — Registro de Descongelación y Entregas",
+      haccp12: "HACCP-12 — Verificación de Preparación en Frío (PCC1b)",
 
       s14: "14. Aprobación y Firma",
+
+      s15: "15. Listado de Platillos",
 
       formatosResumen: "Resumen de Formatos",
 
@@ -103,6 +116,7 @@ module.exports = {
     ui: {
       planLabel: "HACCP Plan",
       btnImprimir: "Print",
+      indice: "Contents",
       printFooterText: "Confidential document – Internal and regulatory use"
     },
     nav: {
@@ -178,14 +192,26 @@ module.exports = {
       s12: "12. Specific Considerations",
       s12_1: "12.1 Domestic Kitchen and Street Sale",
       s12_2: "12.2 Home Delivery (WhatsApp)",
+      s12_3: "12.3 Catering to Order",
 
       s13: "13. HACCP Recording Formats",
-      s13_1: "HACCP-01 to HACCP-09",
-      haccp10: "HACCP-10",
-      haccp11: "HACCP-11",
-      haccp12: "HACCP-12",
+      s13_1: "13.1 Recording Formats (HACCP-01 to HACCP-12)",
+      haccp01: "HACCP-01 – Cooking Temperature Control",
+      haccp02: "HACCP-02 – Rapid Cooling Control",
+      haccp03: "HACCP-03 – Service Temperature Control",
+      haccp04: "HACCP-04 — Purchase Control and Supplier Traceability",
+      haccp05: "HACCP-05 – Refrigerator Temperature Control",
+      haccp06: "HACCP-06 – Daily Cleaning and Disinfection Log",
+      haccp07: "HACCP-07 – Incident and Corrective Action Log",
+      haccp08: "HACCP-08 – Thermometer Calibration Log",
+      haccp09: "HACCP-09 – Staff Training Log",
+      haccp10: "HACCP-10 — Freezer Temperature Control",
+      haccp11: "HACCP-11 — Defrosting & Delivery Record",
+      haccp12: "HACCP-12 — Cold Preparation Verification (CCP1b)",
 
       s14: "14. Approval & Signature",
+
+      s15: "15. Dish List",
 
       formatosResumen: "Format Summary",
 
