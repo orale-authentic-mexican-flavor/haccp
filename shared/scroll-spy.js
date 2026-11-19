@@ -2,11 +2,21 @@
 // Resalta en el sidebar la sección/subsección visible mientras se hace scroll,
 // y mantiene esa entrada a la vista dentro del propio panel de navegación.
 //
-// Varios enlaces de subsección comparten href con su sección padre (p.ej. las
-// 8 entradas de la sección 0 apuntan todas a #seccion-0): esos NO se tratan
-// como anclas propias, solo se resalta el enlace principal. Únicamente las
-// subsecciones con href único (apuntando a un <h2 id="..."> real dentro del
-// contenido, como #sec-4-2 o #pcc4) se observan y resaltan por separado.
+// Cada enlace de subsección del sidebar apunta a su propia ancla real dentro
+// del contenido (<h2>/<h3> con id, p.ej. #sec-0-1, #pcc4, #haccp-10). Si
+// algún href coincidiera con el de una sección principal o se repitiera, se
+// ignora como ancla propia y solo se resalta el enlace principal.
+//
+// Sección activa: la última .seccion que ocupa la banda de detección
+// (10%–20% desde arriba del viewport).
+// Subsección activa: dentro de la sección activa, el ÚLTIMO encabezado cuyo
+// borde superior ya pasó la banda (top <= 20% del viewport), aunque ya no
+// esté dentro de ella. Así la subsección sigue resaltada mientras se lee su
+// cuerpo, no solo mientras el encabezado cruza la banda.
+//
+// #indice es una .seccion sin entrada en el sidebar: cuando está activa no
+// se resalta ningún enlace (no hay main link con ese href ni subsecciones
+// observadas dentro de ella).
 (function () {
   var sidebar = document.querySelector('.sidebar');
   var secciones = document.querySelectorAll('.contenido .seccion');
@@ -14,6 +24,10 @@
 
   var mainLinks = sidebar.querySelectorAll('.nav-link:not(.subseccion)');
   var subLinks = sidebar.querySelectorAll('.nav-link.subseccion');
+
+  /* Límite inferior de la banda de detección, como fracción del alto del
+     viewport. Debe coincidir con rootMargin del observer (-80% abajo). */
+  var BANDA_INFERIOR = 0.2;
 
   var mainHrefs = {};
   mainLinks.forEach(function (link) {
@@ -29,10 +43,14 @@
     var el = document.querySelector(href);
     if (el) subAnchors.push(el);
   });
+  // Orden del documento, para que "el último que pasó la banda" sea correcto
+  // aunque el sidebar listara las entradas en otro orden.
+  subAnchors.sort(function (a, b) {
+    return a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1;
+  });
 
   var seccionesArr = Array.prototype.slice.call(secciones);
   var visibleSecciones = {};
-  var visibleSub = {};
   var ultimoActivoId = null;
 
   function actualizar() {
@@ -42,9 +60,11 @@
     });
     if (!seccionActiva) return;
 
+    var limite = window.innerHeight * BANDA_INFERIOR;
     var subActiva = null;
     subAnchors.forEach(function (el) {
-      if (visibleSub[el.id] && el.closest('.seccion') === seccionActiva) subActiva = el;
+      if (el.closest('.seccion') !== seccionActiva) return;
+      if (el.getBoundingClientRect().top <= limite) subActiva = el;
     });
 
     mainLinks.forEach(function (link) {
@@ -67,10 +87,15 @@
     if (activo) activo.scrollIntoView({ block: 'nearest' });
   }
 
+  /* Las secciones se registran en visibleSecciones; los encabezados de
+     subsección solo sirven de disparador: cada vez que uno entra o sale de
+     la banda, actualizar() recalcula con getBoundingClientRect cuál es el
+     último que ya la pasó. No hace falta escuchar el evento scroll. */
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
-      var map = entry.target.classList.contains('seccion') ? visibleSecciones : visibleSub;
-      map[entry.target.id] = entry.isIntersecting;
+      if (entry.target.classList.contains('seccion')) {
+        visibleSecciones[entry.target.id] = entry.isIntersecting;
+      }
     });
     actualizar();
   }, { rootMargin: '-10% 0px -80% 0px', threshold: 0 });

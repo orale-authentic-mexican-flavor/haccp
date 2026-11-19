@@ -198,6 +198,13 @@ y 10 de refrigeración a corto plazo, 40 en total. No se
 produce un volumen superior al que puede enfriarse
 rápidamente (PCC2) y almacenarse de inmediato a la
 temperatura que corresponda.</p>
+<p><strong>Producción de tamales:</strong> 30 tamales por
+producción, con un máximo de 3 producciones por semana y un tope
+de 90 tamales por semana.</p>
+<p><strong>Composición del menú:</strong> el menú se compone cada
+semana de unos 3 o 4 platillos rotativos tomados del catálogo,
+que se venden por mensajería y redes sociales (WhatsApp, §12.2)
+y, en su caso, en puesto.</p>
 <p><strong>Menú aplicable:</strong></p>
 <ul>
   <li>Pozole rojo estilo Jalisco</li>
@@ -207,7 +214,7 @@ temperatura que corresponda.</p>
   <li>Nachos con guacamole</li>
   <li>Chilaquiles</li>
   <li>Taco de nopales</li>
-  <li>Platillos rotativos: tamales, quesadillas</li>
+  <li>Platillos rotativos: tamales (cerdo, pollo, champiñones y queso, nopales con queso) en salsa roja de guajillo o salsa verde de tomatillo</li>
 </ul>
 
 <h2 id="sec-1-3">1.3 Marco Regulatorio Aplicable</h2>
@@ -480,6 +487,92 @@ de mantenimiento en caliente ≥63°C (PCC3) — es una práctica
 operativa de Órale, no un límite crítico independiente de
 ninguno de los dos PCC.</em></p>
 
+<h3 id="sec-3-0b">Nota sobre preprocesos — Tamales</h3>
+<p>Los tamales se elaboran en la jornada de producción del menú
+rotativo. Se venden siete variedades: cerdo, pollo y champiñones
+con queso, cada una en salsa roja de guajillo o en salsa verde
+de tomatillo, y nopales con queso (un solo tamal con ambos
+rellenos). Los tamales de cerdo y de pollo llevan masa con
+manteca de cerdo; los de champiñones y queso y los de nopales
+con queso, masa con manteca vegetal. La masa se bate con agua,
+sin polvo para hornear.</p>
+<div class="tabla-wrapper">
+<table class="tabla-ancha">
+  <thead>
+    <tr>
+      <th>Etapa</th>
+      <th>Descripción</th>
+      <th>Punto de control</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1 — Hojas</td>
+      <td>Hoja de plátano (congelada) o de maíz (en bolsa al
+      vacío). Lavar, remojar en agua potable e inspeccionar
+      (§10.8)</td>
+      <td>Visual: hoja limpia y entera, sin moho; descartar las
+      dañadas</td>
+    </tr>
+    <tr class="alt">
+      <td>2 — Salsa</td>
+      <td>Salsa roja de guajillo o salsa verde de tomatillo</td>
+      <td>Se cuece con el relleno (etapa 3)</td>
+    </tr>
+    <tr>
+      <td>3 — Rellenos</td>
+      <td>Cocer los rellenos: cerdo, pollo, champiñones y queso,
+      nopales con queso. Pollo crudo en tabla amarilla, sin
+      lavarlo (§10.3)</td>
+      <td class="celda-riesgo-alto">≥75°C instantáneo, o ≥70°C
+      durante 2 minutos (PCC1). Registro en HACCP-01</td>
+    </tr>
+    <tr class="alt">
+      <td>4 — Masa vegetal (primero)</td>
+      <td>Masa con manteca vegetal, batida con agua. Recipiente y
+      utensilios propios</td>
+      <td>Se elabora antes que la masa con manteca de cerdo</td>
+    </tr>
+    <tr>
+      <td>5 — Masa con manteca de cerdo</td>
+      <td>Masa con manteca de cerdo, batida con agua. Utensilios
+      distintos de los de la masa vegetal, o los mismos lavados y
+      desinfectados</td>
+      <td>Sin contacto con la masa vegetal</td>
+    </tr>
+    <tr class="alt">
+      <td>6 — Armado y amarre</td>
+      <td>Extender la masa sobre la hoja, añadir el relleno y
+      cerrar. Los tamales vegetarianos (champiñones y queso,
+      nopales con queso) se amarran; los de cerdo y pollo no</td>
+      <td>Visual: todos los tamales vegetarianos amarrados</td>
+    </tr>
+    <tr>
+      <td>7 — Cocción al vapor</td>
+      <td>Los tamales vegetarianos, en vaporera aparte o en el
+      nivel superior, para que no les gotee jugo de los de
+      carne</td>
+      <td class="celda-riesgo-alto">≥75°C instantáneo, o ≥70°C
+      durante 2 minutos, en el centro del tamal más grande
+      (PCC1). Registro en HACCP-01</td>
+    </tr>
+    <tr class="alt">
+      <td>8 — Enfriamiento</td>
+      <td>En refrigerador hasta ≤5°C y, después, al congelador</td>
+      <td>PCC2 (HACCP-02) y PCC4 (HACCP-10)</td>
+    </tr>
+    <tr>
+      <td>9 — Almacenamiento</td>
+      <td>Tamales vegetarianos y de manteca de cerdo en
+      contenedores separados, rotulados con relleno, salsa y
+      tipo de manteca, en refrigerador y en congelador
+      (§12.1)</td>
+      <td>PCC7 (refrigerado) / PCC4 (congelado)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
 <h2 id="sec-3-2">3.2 Tabla de Productos y Peligros Asociados</h2>
 <div class="tabla-wrapper">
 <table>
@@ -522,7 +615,7 @@ ninguno de los dos PCC.</em></p>
       </td>
     </tr>
     <tr class="alt">
-      <td>Tacos Cochinita Pibil</td>
+      <td>Tacos de Cochinita Pibil</td>
       <td>Cerdo marinado</td>
       <td>Caliente &gt;63°C</td>
       <td>
@@ -561,6 +654,62 @@ ninguno de los dos PCC.</em></p>
       <td>Vegetal</td>
       <td>Caliente &gt;63°C</td>
       <td>Gluten (tortilla). Bajo riesgo alérgeno.</td>
+    </tr>
+    <tr class="alt">
+      <td>Tamales de Cerdo</td>
+      <td>Cerdo (masa con manteca de cerdo)</td>
+      <td>Caliente &gt;63°C</td>
+      <td>
+        <ul>
+          <li>Gluten: verificar (harina de maíz)</li>
+          <li>Sulfitos (salsa roja de guajillo)</li>
+          <li>Salsa verde de tomatillo: sin alérgenos declarados</li>
+          <li>Grasa animal (manteca de cerdo)</li>
+          <li>Hoja no comestible</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Tamales de Pollo</td>
+      <td>Pollo (ave; masa con manteca de cerdo)</td>
+      <td>Caliente &gt;63°C</td>
+      <td>
+        <ul>
+          <li>Gluten: verificar (harina de maíz)</li>
+          <li>Sulfitos (salsa roja de guajillo)</li>
+          <li>Salsa verde de tomatillo: sin alérgenos declarados</li>
+          <li>Ave cruda: Campylobacter / Salmonella</li>
+          <li>Grasa animal (manteca de cerdo)</li>
+          <li>Hoja no comestible</li>
+        </ul>
+      </td>
+    </tr>
+    <tr class="alt">
+      <td>Tamales de Champiñones y Queso</td>
+      <td>Vegetariano (queso; masa con manteca vegetal)</td>
+      <td>Caliente &gt;63°C</td>
+      <td>
+        <ul>
+          <li>Lácteos (queso)</li>
+          <li>Soya: verificar en etiqueta (manteca vegetal, queso,
+          champiñones)</li>
+          <li>Sulfitos (salsa roja de guajillo)</li>
+          <li>Gluten: verificar (harina de maíz)</li>
+          <li>Hoja no comestible</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Tamal de Nopales con Queso</td>
+      <td>Vegetariano (queso; masa con manteca vegetal)</td>
+      <td>Caliente &gt;63°C</td>
+      <td>
+        <ul>
+          <li>Lácteos (queso)</li>
+          <li>Gluten: verificar (harina de maíz)</li>
+          <li>Hoja no comestible</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -655,7 +804,7 @@ Council.</strong></p>
       <td>Enfriamiento rápido (si aplica)</td>
       <td>
         <ul>
-          <li>De &gt;63°C a ≤5°C en máx. 4 horas</li>
+          <li>De &gt;63°C a &lt;21°C en 2 horas y de &lt;21°C a ≤5°C en 4 horas adicionales (máximo 6 horas en total), según PCC2</li>
           <li>Baño de hielo en la tarja doméstica</li>
           <li>Porciones pequeñas para acelerar enfriamiento</li>
           <li>Registro en HACCP-02</li>
@@ -794,6 +943,12 @@ y ventas entre semana:</p>
           ≥70°C durante 2 minutos (PCC1)</li>
           <li>Inicio mínimo 6 horas antes del
           horario de entrega</li>
+          <li>Tamales: hojas (lavado, remojo e inspección);
+          salsa; rellenos (PCC1); masa vegetal primero, con
+          recipiente y utensilios propios; masa con manteca de
+          cerdo; armado (los vegetarianos se amarran); cocción al vapor
+          (PCC1 medido en el centro del tamal más grande). Ver
+          §3, "Nota sobre preprocesos — Tamales"</li>
         </ul>
       </td>
     </tr>
@@ -802,8 +957,11 @@ y ventas entre semana:</p>
       <td>Enfriamiento rápido</td>
       <td>
         <ul>
-          <li>De >63°C a ≤5°C en máximo 4 horas</li>
-          <li>Baño de hielo en tarja</li>
+          <li>De >63°C a <21°C en 2 horas y de <21°C a ≤5°C en 4 horas adicionales (máximo 6 horas en total), según PCC2</li>
+          <li>Baño de hielo en tarja (no se aplica a tamales envueltos: si se usa baño de hielo, el tamal va en recipiente cerrado, sin que el agua lo toque)</li>
+          <li>Tamales: enfriamiento en refrigerador hasta
+          ≤5°C, dentro de los tiempos de PCC2, y, después, congelación (PCC4). Registro en
+          HACCP-02</li>
           <li>Registro en HACCP-02 (PCC2)</li>
         </ul>
       </td>
@@ -824,6 +982,19 @@ y ventas entre semana:</p>
               (producción + 3 meses)</li>
             </ul>
           </li>
+          <li>Tamales: se entregan envueltos en su propia hoja,
+          sin contenedor de 650 ml. Venta por unidad o en orden
+          de 2 o 3</li>
+          <li>Identificación: los tamales vegetarianos
+          (champiñones y queso, nopales con queso) se amarran;
+          los de cerdo y pollo no. El contenedor de congelación
+          se rotula con relleno, salsa y tipo de manteca</li>
+          <li>"Retirar la hoja antes de consumir" se comunica en
+          el menú, el ticket o al entregar</li>
+          <li>En el servicio (puesto y catering), los tamales se
+          mantienen en bufeteras o compartimentos separados y
+          rotulados por relleno y salsa; no se mezclan ni se
+          devuelven a un contenedor distinto</li>
         </ul>
       </td>
     </tr>
@@ -1083,6 +1254,44 @@ const SECCION_5 = `
       <td>NO</td>
     </tr>
     <tr class="celda-riesgo-alto">
+      <td>Preparación de masa y armado de tamales</td>
+      <td>Contaminación por el manipulador y contaminación
+      cruzada entre rellenos y masa</td>
+      <td>Contacto cruzado de alérgenos (lácteos, soya) y de
+      grasa animal (manteca de cerdo) en la masa vegetal</td>
+      <td>Fragmentos de hoja</td>
+      <td>3</td><td>3</td><td>9</td>
+      <td>
+        <ul>
+          <li>Masa vegetal primero, con recipiente y utensilios
+          propios</li>
+          <li>Utensilios distintos, o lavados y desinfectados,
+          entre una masa y otra</li>
+          <li>Tamales vegetarianos amarrados; contenedores rotulados
+          con relleno, salsa y tipo de manteca</li>
+          <li>Prerrequisito: §3 (Nota sobre preprocesos —
+          Tamales), §10.8</li>
+        </ul>
+      </td>
+      <td>NO</td>
+    </tr>
+    <tr class="celda-riesgo-medio">
+      <td>Preparación de hojas (plátano / maíz)</td>
+      <td>Mohos y suciedad en la hoja</td>
+      <td>Residuos de pesticidas</td>
+      <td>Tierra y fibras</td>
+      <td>2</td><td>2</td><td>4</td>
+      <td>
+        <ul>
+          <li>Lavado y remojo en agua potable</li>
+          <li>Inspección visual y descarte de hojas con moho</li>
+          <li>Hojas secas en armario cerrado</li>
+          <li>Prerrequisito: §10.8</li>
+        </ul>
+      </td>
+      <td>NO</td>
+    </tr>
+    <tr class="celda-riesgo-alto">
       <td>Preparación de platillos e ingredientes sin cocción
       posterior (Nachos con Guacamole; guacamole y salsa de
       jitomate cruda)</td>
@@ -1135,6 +1344,8 @@ const SECCION_5 = `
         <ul>
           <li>Temperatura interna &gt;75°C</li>
           <li>Termómetro sonda calibrado</li>
+          <li>Tamales: cocción al vapor, temperatura medida en el
+          centro del tamal más grande</li>
         </ul>
       </td>
       <td>SÍ (PCC1)</td>
@@ -1154,14 +1365,14 @@ const SECCION_5 = `
       <td>3</td><td>3</td><td>9</td>
       <td>
         <ul>
-          <li>De &gt;63°C a ≤5°C en máx. 4 h</li>
+          <li>De &gt;63°C a &lt;21°C en 2 horas y de &lt;21°C a ≤5°C en 4 horas adicionales (máximo 6 horas en total), según PCC2</li>
           <li>Baño de hielo en la tarja</li>
         </ul>
       </td>
       <td>SÍ (PCC2)</td>
     </tr>
     <tr class="celda-riesgo-alto">
-      <td>Transporte</td>
+      <td>Transporte (puesto y eventos de catering)</td>
       <td>Rotura de la cadena de calor</td>
       <td>Ninguno</td>
       <td>Ninguno</td>
@@ -1172,6 +1383,10 @@ const SECCION_5 = `
           <li>Tiempo &lt;1 h</li>
           <li>Verificación de temperatura antes de salir de
           la cocina y al llegar</li>
+          <li>Catering: tamales transportados calientes,
+          regenerados al vapor, en bolsa isotérmica o
+          contenedores de poliestireno expandido, con
+          verificación continua de la temperatura (≥63°C)</li>
         </ul>
       </td>
       <td>SÍ (PCC3)</td>
@@ -1330,6 +1545,22 @@ coincide con la columna "¿Es PCC?" de §5.2.</p>
       <td>NO — prerrequisito</td>
     </tr>
     <tr>
+      <td>Preparación de masa y armado de tamales</td>
+      <td>Sí</td>
+      <td>No</td>
+      <td>Sí</td>
+      <td>Sí — cocción al vapor (PCC1)</td>
+      <td>NO — prerrequisito</td>
+    </tr>
+    <tr class="alt">
+      <td>Preparación de hojas (plátano / maíz)</td>
+      <td>Sí</td>
+      <td>No</td>
+      <td>Sí</td>
+      <td>Sí — cocción al vapor (PCC1)</td>
+      <td>NO — prerrequisito</td>
+    </tr>
+    <tr>
       <td>Preparación de platillos e ingredientes sin cocción
       posterior</td>
       <td>Sí</td>
@@ -1366,7 +1597,7 @@ coincide con la columna "¿Es PCC?" de §5.2.</p>
       <td>SÍ (PCC2)</td>
     </tr>
     <tr class="alt">
-      <td>Transporte</td>
+      <td>Transporte (puesto y eventos de catering)</td>
       <td>Sí</td>
       <td>No</td>
       <td>Sí</td>
@@ -2386,6 +2617,10 @@ de alimentos durante el episodio de diarrea o vómito y hasta
   preparados.</li>
   <li><strong>Balda inferior:</strong> carnes crudas en recipientes
   herméticos para evitar goteo.</li>
+  <li><strong>Ave cruda (pollo):</strong> en la posición más baja
+  de la balda inferior, en recipiente hermético. No lavar el
+  pollo crudo: el lavado salpica Campylobacter a superficies y
+  utensilios.</li>
   <li><strong>Cajón de verduras:</strong> vegetales frescos.</li>
   <li>Temperatura objetivo: ≤5°C. Verificación dos veces al día.
   Registro en HACCP-05.</li>
@@ -2425,6 +2660,9 @@ respecto.</p>
   fecha máxima de consumo</li>
   <li>Capacidad máxima Órale: 30 raciones
   (3 cajones × 10 raciones de 650 ml)</li>
+  <li>Hoja de plátano congelada (para tamales): se guarda en el
+  congelador hasta su uso, rotulada y separada de los alimentos
+  (§10.8)</li>
   <li>Verificación de temperatura 2 veces al día
   — registro en HACCP-10</li>
   <li>Congelar inmediatamente tras completar el
@@ -2514,6 +2752,13 @@ transporta a la cocina de producción. No se reciben entregas
 de proveedores. Tampoco se adquiere producto congelado: la
 congelación se realiza en la cocina tras la producción
 (PCC4).</p>
+<p><strong>Excepción — hoja de plátano:</strong> la hoja de
+plátano para tamales se adquiere congelada. No es un alimento:
+no se consume y se retira antes de comer. Antes de usarla se
+lava, se remoja en agua potable y se inspecciona. Esta excepción
+no modifica la regla para los alimentos, que no se adquieren
+congelados. Hasta su uso, la hoja se guarda en el congelador,
+rotulada y separada de los alimentos (§10.3b).</p>
 <p><strong>Requisitos de transporte (GN-16 §4.3.11):</strong></p>
 <ul>
   <li>El producto refrigerado se transporta en bolsa isotérmica
@@ -2546,7 +2791,7 @@ congelación se realiza en la cocina tras la producción
   de compra.</li>
 </ul>
 <p><strong>Producto cárnico en envase al vacío:</strong></p>
-<p>La carne se adquiere en envase al vacío. GN-16 §4.3.10
+<p>La carne se adquiere en envase al vacío; el pollo, en bandeja al vacío. GN-16 §4.3.10
 establece que, una vez abierto, un envase al vacío debe
 utilizarse lo antes posible, ya que sus condiciones de
 conservación dejan de ser las del envase sellado.</p>
@@ -2576,6 +2821,27 @@ o registra el número de lote en HACCP-04. Esta evidencia
 permite trazar el producto un paso atrás hasta su
 establecimiento de origen, más allá del establecimiento
 minorista donde se adquirió.</p>
+<p><strong>Hojas para tamales (prerrequisito):</strong></p>
+<ul>
+  <li>La hoja de maíz se adquiere en bolsa al vacío; una vez
+  abierta, las hojas secas se guardan en armario cerrado.</li>
+  <li>Antes de usar cualquier hoja (plátano o maíz): lavado y
+  remojo en agua potable, e inspección visual.</li>
+  <li>Se descarta toda hoja con moho.</li>
+</ul>
+<p><strong>Queso apto para vegetarianos (prerrequisito):</strong></p>
+<ul>
+  <li>Los tamales de champiñones y queso y de nopales con queso
+  se declaran vegetarianos solo si el queso es apto para
+  vegetarianos, sin cuajo animal.</li>
+  <li>Si la etiqueta indica "rennet" o "cuajo" sin especificar su
+  origen, se considera de origen animal y el tamal no se declara
+  vegetariano.</li>
+  <li>Se verifica en cada compra y cada vez que cambie el queso o
+  el proveedor.</li>
+  <li>La etiqueta del queso se conserva junto al ticket de
+  compra.</li>
+</ul>
 <p class="nota"><em>Establecimientos habituales: Musgrave
 MarketPlace, Limerick Fruit Suppliers, mexicanthings, Dunnes,
 Tesco y Lidl. Trayecto típico a la cocina de producción: 15
@@ -2595,7 +2861,7 @@ gestiona activamente los 14 alérgenos de declaración obligatoria.</p>
       <th>Lácteos</th>
       <th>Huevo</th>
       <th>Frutos Secos</th>
-      <th>Soja</th>
+      <th>Soya</th>
       <th>Sulfitos</th>
       <th>Sésamo</th>
     </tr>
@@ -2612,17 +2878,17 @@ gestiona activamente los 14 alérgenos de declaración obligatoria.</p>
       <td>No</td><td>No</td><td>SÍ (chile)</td><td>No</td>
     </tr>
     <tr>
-      <td>Tacos Carnitas</td>
+      <td>Tacos de Carnitas</td>
       <td>SÍ (tortilla)</td><td>No</td><td>No</td>
       <td>No</td><td>No</td><td>Posible</td><td>No</td>
     </tr>
     <tr class="alt">
-      <td>Tacos Cochinita</td>
+      <td>Tacos de Cochinita Pibil</td>
       <td>SÍ (tortilla)</td><td>No</td><td>No</td>
       <td>No</td><td>No</td><td>Posible</td><td>No</td>
     </tr>
     <tr>
-      <td>Nachos + Guacamole</td>
+      <td>Nachos con Guacamole</td>
       <td>SÍ (nachos)</td><td>SÍ (queso)</td><td>No</td>
       <td>No</td><td>No</td><td>Posible</td><td>No</td>
     </tr>
@@ -2636,9 +2902,52 @@ gestiona activamente los 14 alérgenos de declaración obligatoria.</p>
       <td>SÍ (tortilla)</td><td>No</td><td>No</td>
       <td>No</td><td>No</td><td>No</td><td>No</td>
     </tr>
+    <tr class="alt">
+      <td>Tamal de Cerdo en Salsa Roja</td>
+      <td>Verificar</td><td>No</td><td>No</td>
+      <td>No</td><td>No</td><td>SÍ (guajillo)</td><td>No</td>
+    </tr>
+    <tr>
+      <td>Tamal de Cerdo en Salsa Verde</td>
+      <td>Verificar</td><td>No</td><td>No</td>
+      <td>No</td><td>No</td><td>No</td><td>No</td>
+    </tr>
+    <tr class="alt">
+      <td>Tamal de Pollo en Salsa Roja</td>
+      <td>Verificar</td><td>No</td><td>No</td>
+      <td>No</td><td>No</td><td>SÍ (guajillo)</td><td>No</td>
+    </tr>
+    <tr>
+      <td>Tamal de Pollo en Salsa Verde</td>
+      <td>Verificar</td><td>No</td><td>No</td>
+      <td>No</td><td>No</td><td>No</td><td>No</td>
+    </tr>
+    <tr class="alt">
+      <td>Tamal de Champiñones y Queso en Salsa Roja</td>
+      <td>Verificar</td><td>SÍ (queso)</td><td>No</td>
+      <td>No</td><td>Verificar en etiqueta (manteca vegetal, queso, champiñones)</td><td>SÍ (guajillo)</td><td>No</td>
+    </tr>
+    <tr>
+      <td>Tamal de Champiñones y Queso en Salsa Verde</td>
+      <td>Verificar</td><td>SÍ (queso)</td><td>No</td>
+      <td>No</td><td>Verificar en etiqueta (manteca vegetal, queso, champiñones)</td><td>No</td><td>No</td>
+    </tr>
+    <tr class="alt">
+      <td>Tamal de Nopales con Queso</td>
+      <td>Verificar</td><td>SÍ (queso)</td><td>No</td>
+      <td>No</td><td>No</td><td>No</td><td>No</td>
+    </tr>
   </tbody>
 </table>
 </div>
+
+<p class="nota"><em>Tamales: los de cerdo y los de pollo llevan
+masa con manteca de cerdo. Los de champiñones y queso y los de
+nopales con queso llevan masa con manteca vegetal y se declaran
+vegetarianos solo con queso apto para vegetarianos (§10.8).
+Gluten: verificar en la etiqueta de la harina de maíz. La
+etiqueta de la manteca vegetal y del queso se verifica en cada
+compra.</em></p>
 
 <h2 id="sec-11-2">11.2 Comunicación de Alérgenos al Cliente</h2>
 <ul>
@@ -2650,6 +2959,10 @@ gestiona activamente los 14 alérgenos de declaración obligatoria.</p>
   de forma correcta.</li>
   <li>Ante clientes con alergias graves: comunicar que la cocina
   no está 100% libre de trazas cruzadas.</li>
+  <li>Tamales: los de cerdo y los de pollo llevan manteca de
+  cerdo; se informa a todo cliente que lo pregunte.</li>
+  <li>Tamales: "Retirar la hoja antes de consumir" se comunica en
+  el menú, el ticket o al entregar.</li>
 </ul>
 `;
 
@@ -2876,6 +3189,11 @@ County Council.</em></p>
           <li>Para alimentos de origen animal (cerdo, pollo):
           conservar el ticket o factura hasta que pueda asumirse
           razonablemente que el alimento ha sido consumido</li>
+          <li>Tamales: los vegetarianos (manteca vegetal) y los de
+          manteca de cerdo se almacenan en contenedores separados,
+          rotulados con relleno, salsa y tipo de manteca, en
+          refrigerador y en congelador. Los tamales vegetarianos,
+          además, se amarran</li>
           <li>Registro en HACCP-04</li>
           <li><strong>Trazabilidad del producto de origen animal:</strong>
           la etiqueta del envase al vacío incluye el número de
@@ -3075,6 +3393,25 @@ lugar limpio (GN-16 §4.3.2).</p>
   </tbody>
 </table>
 </div>
+
+<h2 id="sec-12-3">12.3 Catering bajo Encargo</h2>
+<p>Órale atiende pedidos de catering bajo encargo para eventos:</p>
+<ul>
+  <li><strong>Producción:</strong> en la misma cocina de
+  producción, con los mismos PCC y programas prerrequisito.</li>
+  <li><strong>Transporte:</strong> en caliente, regenerado al
+  vapor, en bolsa isotérmica o contenedores aislados, con
+  verificación continua de la temperatura (≥63°C). Ver §5.2,
+  etapa "Transporte (puesto y eventos de catering)" (PCC3).</li>
+  <li><strong>Mantenimiento en el evento:</strong> a ≥63°C en
+  bufeteras tapadas, con calentador eléctrico y/o mechero de
+  alcohol cerrado a prueba de derrames.</li>
+  <li><strong>Verificación:</strong> la temperatura se verifica de
+  forma continua.</li>
+  <li><strong>Tamales:</strong> en bufeteras o compartimentos
+  separados y rotulados por relleno y salsa; no se mezclan ni se
+  devuelven a un contenedor distinto (§4.2).</li>
+</ul>
 `;
 
 const SECCION_13 = (function () {
@@ -3353,8 +3690,8 @@ ${filasVacias(10, 9)}  </tbody>
 </table>
 </div>
 
-<h2 id="haccp-10">HACCP-10 — Control de Temperatura
-del Congelador</h2>
+<h3 id="haccp-10">HACCP-10 — Control de Temperatura
+del Congelador</h3>
 <p class="nota"><em>Límite crítico: ≤-18°C en todo
 momento. Verificar dos veces al día.
 Una vez descongelado, no recongelar.</em></p>
@@ -3379,8 +3716,8 @@ ${filasVacias(31, 10)}  </tbody>
 </table>
 </div>
 
-<h2 id="haccp-11">HACCP-11 — Registro de Descongelación
-y Entregas</h2>
+<h3 id="haccp-11">HACCP-11 — Registro de Descongelación
+y Entregas</h3>
 <p class="nota"><em>Completar para cada pedido.
 Descongelar siempre en refrigerador.
 Nunca a temperatura ambiente. Nunca recongelar.</em></p>
@@ -3407,8 +3744,8 @@ ${filasVacias(20, 12)}  </tbody>
 </table>
 </div>
 
-<h2 id="haccp-12">HACCP-12 — Verificación de Preparación en Frío
-(PCC1b)</h2>
+<h3 id="haccp-12">HACCP-12 — Verificación de Preparación en Frío
+(PCC1b)</h3>
 <p class="nota"><em>Completar antes de cada preparación de
 ingredientes sin tratamiento térmico posterior y en cada
 apertura de jornada de servicio. Todos los puntos deben
@@ -3745,6 +4082,223 @@ una no sustituye al registro de la otra.</p>
 </ul>
 `;
 
+const SECCION_15 = `
+<p>Catálogo de platillos que Órale puede preparar. Cada semana se
+ofrecen unos 3 o 4, en rotación. Los alérgenos se verifican con las
+etiquetas de los ingredientes en cada compra (§10.8, §11).
+El detalle de alérgenos está en §11.1. Las bebidas (Horchata,
+Jamaica y Té Frío) forman parte del menú de catering y se preparan
+solo bajo pedido; pueden no estar disponibles cada semana.</p>
+<div class="tabla-wrapper">
+<table>
+  <thead>
+    <tr>
+      <th>Platillo</th>
+      <th>Tipo</th>
+      <th>Alérgenos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Pozole Rojo de Cerdo</td>
+      <td>Cerdo</td>
+      <td>Sulfitos (posible), gluten (verificar)</td>
+    </tr>
+    <tr class="alt">
+      <td>Pozole Rojo de Pollo</td>
+      <td>Pollo</td>
+      <td>Sulfitos (posible), gluten (verificar)</td>
+    </tr>
+    <tr>
+      <td>Pozole Rojo de Champiñón</td>
+      <td>Vegetariano</td>
+      <td>Sulfitos (posible), gluten (verificar)</td>
+    </tr>
+    <tr class="alt">
+      <td>Pozole Verde de Champiñón</td>
+      <td>Vegetariano</td>
+      <td>Gluten (verificar)</td>
+    </tr>
+    <tr>
+      <td>Chilaquiles Verdes con Pollo</td>
+      <td>Pollo</td>
+      <td>Gluten, lácteos</td>
+    </tr>
+    <tr class="alt">
+      <td>Chilaquiles Rojos con Pollo</td>
+      <td>Pollo</td>
+      <td>Gluten, lácteos, sulfitos</td>
+    </tr>
+    <tr>
+      <td>Chilaquiles Rojos con Champiñones y Queso</td>
+      <td>Vegetariano</td>
+      <td>Gluten, lácteos, soya (verificar en etiqueta), sulfitos</td>
+    </tr>
+    <tr class="alt">
+      <td>Chilaquiles Verdes con Champiñones y Queso</td>
+      <td>Vegetariano</td>
+      <td>Gluten, lácteos, soya (verificar en etiqueta)</td>
+    </tr>
+    <tr>
+      <td>Chilaquiles (huevo opcional)</td>
+      <td>Sin carne (huevo opcional)</td>
+      <td>Gluten, lácteos, huevo (posible), sulfitos (posible)</td>
+    </tr>
+    <tr class="alt">
+      <td>Cochinita Pibil de Cerdo</td>
+      <td>Cerdo</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>Cochinita Pibil de Pollo</td>
+      <td>Pollo</td>
+      <td>—</td>
+    </tr>
+    <tr class="alt">
+      <td>Panuchos de Cochinita</td>
+      <td>Cerdo</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>Panuchos de Pollo</td>
+      <td>Pollo</td>
+      <td>—</td>
+    </tr>
+    <tr class="alt">
+      <td>Tamales Rojos de Cerdo</td>
+      <td>Cerdo (manteca de cerdo)</td>
+      <td>Sulfitos, gluten (verificar)</td>
+    </tr>
+    <tr>
+      <td>Tamales Verdes de Cerdo</td>
+      <td>Cerdo (manteca de cerdo)</td>
+      <td>Gluten (verificar)</td>
+    </tr>
+    <tr class="alt">
+      <td>Tamales Rojos de Pollo</td>
+      <td>Pollo (manteca de cerdo)</td>
+      <td>Sulfitos, gluten (verificar)</td>
+    </tr>
+    <tr>
+      <td>Tamales Verdes de Pollo</td>
+      <td>Pollo (manteca de cerdo)</td>
+      <td>Gluten (verificar)</td>
+    </tr>
+    <tr class="alt">
+      <td>Tamales Rojos de Champiñones y Queso</td>
+      <td>Vegetariano</td>
+      <td>Lácteos, soya (verificar en etiqueta), sulfitos, gluten (verificar)</td>
+    </tr>
+    <tr>
+      <td>Tamales Verdes de Champiñones y Queso</td>
+      <td>Vegetariano</td>
+      <td>Lácteos, soya (verificar en etiqueta), gluten (verificar)</td>
+    </tr>
+    <tr class="alt">
+      <td>Tamal de Nopales con Queso</td>
+      <td>Vegetariano</td>
+      <td>Lácteos, gluten (verificar)</td>
+    </tr>
+    <tr>
+      <td>Tacos al Pastor</td>
+      <td>Cerdo</td>
+      <td>Gluten, sulfitos, lácteos (posible)</td>
+    </tr>
+    <tr class="alt">
+      <td>Tacos de Carnitas</td>
+      <td>Cerdo</td>
+      <td>Gluten, sulfitos (posible)</td>
+    </tr>
+    <tr>
+      <td>Tacos de Cochinita Pibil</td>
+      <td>Cerdo marinado</td>
+      <td>Gluten, sulfitos (posible)</td>
+    </tr>
+    <tr class="alt">
+      <td>Taco de Nopales</td>
+      <td>Vegetal</td>
+      <td>Gluten</td>
+    </tr>
+    <tr>
+      <td>Tortas al Pastor</td>
+      <td>Cerdo</td>
+      <td>Gluten, sulfitos</td>
+    </tr>
+    <tr class="alt">
+      <td>Tortas de Alambre</td>
+      <td>Carne y tocino</td>
+      <td>Gluten, lácteos</td>
+    </tr>
+    <tr>
+      <td>Tacos de Alambre</td>
+      <td>Carne y tocino</td>
+      <td>Lácteos</td>
+    </tr>
+    <tr class="alt">
+      <td>Torta de Cerdo Asado</td>
+      <td>Cerdo</td>
+      <td>Gluten</td>
+    </tr>
+    <tr>
+      <td>Gorditas de Alambre</td>
+      <td>Carne y tocino</td>
+      <td>Lácteos</td>
+    </tr>
+    <tr class="alt">
+      <td>Gorditas de Champiñones y Queso</td>
+      <td>Vegetariano</td>
+      <td>Lácteos, soya (verificar en etiqueta)</td>
+    </tr>
+    <tr>
+      <td>Gorditas de Tinga</td>
+      <td>Pollo</td>
+      <td>Sulfitos</td>
+    </tr>
+    <tr class="alt">
+      <td>Empanadas de Queso</td>
+      <td>Sin carne</td>
+      <td>Lácteos</td>
+    </tr>
+    <tr>
+      <td>Nachos con Guacamole</td>
+      <td>Sin carne</td>
+      <td>Gluten, lácteos, sulfitos (posible)</td>
+    </tr>
+    <tr class="alt">
+      <td>Carnitas al Pastor</td>
+      <td>Cerdo</td>
+      <td>Sulfitos</td>
+    </tr>
+    <tr>
+      <td>Mole Rojo de Pollo (con arroz)</td>
+      <td>Pollo</td>
+      <td>Gluten, cacahuate, frutos de cáscara, sésamo, sulfitos</td>
+    </tr>
+    <tr class="alt">
+      <td>Arroz a la Mexicana</td>
+      <td>Vegetariano</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>Horchata</td>
+      <td>Bebida</td>
+      <td>—</td>
+    </tr>
+    <tr class="alt">
+      <td>Jamaica</td>
+      <td>Bebida</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>Té Frío</td>
+      <td>Bebida (contiene cafeína)</td>
+      <td>—</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+`;
+
 const FORMATOS_RESUMEN = `
 <p>Todos los formatos de registro deben imprimirse
 y mantenerse en la carpeta física HACCP disponible
@@ -3880,6 +4434,7 @@ const SECCIONES = {
   'seccion-12': SECCION_12,
   'seccion-13': SECCION_13,
   'seccion-14': SECCION_14,
+  'seccion-15': SECCION_15,
   'formatos-resumen': FORMATOS_RESUMEN,
   'anexo': ANEXO
 };
